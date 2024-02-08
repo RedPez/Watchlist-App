@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Show 1",
+        "poster": "poster_url_1"
+      },
+      {
+        "id": 2,
+        "title": "Show 2",
+        "poster": "poster_url_2"
+      }
+  ]
