@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import AddButton from './AddButton';
 
 const Searchbar = () => {
   
@@ -34,7 +35,7 @@ return (
             <h3>{item.show.name}</h3>
             {item.show.image && <img src={item.show.image.medium} alt={item.show.name} />}
             <button>Review</button>
-            <button>Add to Watchlist</button>
+            <AddButton show={item.show} />
           </div>
         ))}
       </div>
