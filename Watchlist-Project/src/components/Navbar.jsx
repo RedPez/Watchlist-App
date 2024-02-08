@@ -6,22 +6,22 @@ import Navbar from "react-bootstrap/Navbar";
 function MyNavbar() {
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar>
         <Container>
           <Navbar.Brand href="#home">
             <img
               alt=""
-              src="/img/logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
+              src="../src/assets/images/site-logo.svg"
+              width="150"
+              height="60"
+              className=""
             />{" "}
           </Navbar.Brand>
-          ;
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          
+          <Nav className="justify-content-end">
+            <Nav.Link href="#Home">Home</Nav.Link>
+            <Nav.Link href="#MyReviews">My Reviews</Nav.Link>
+            <Nav.Link href="#Watchlist">Watchlist</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
