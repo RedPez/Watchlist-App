@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
 import ReviewModalWithButton from './ReviewModalWithButton';
 
 
 import AddButton from './AddButton';
 
 const Searchbar = () => {
+
 
 
 const [searchTerm, setSearchTerm] = useState('');
@@ -39,8 +39,9 @@ return (
           <div key={item.show.id}>
             <h3>{item.show.name}</h3>
             {item.show.image && <img src={item.show.image.medium} alt={item.show.name} />}
-
-            <ReviewModalWithButton name={item.show.name}/>
+            <ReviewModalWithButton 
+            title={item.show.name}
+            />
             <AddButton show={item.show} />
 
           </div>
