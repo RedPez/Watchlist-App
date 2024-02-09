@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import ReviewModalWithButton from './ReviewModalWithButton';
+
+
+
 
 const Searchbar = () => {
-  
+
+
 const [searchTerm, setSearchTerm] = useState('');
 const [searchResult, setSearchResult] = useState(null);
 const [error, setError] = useState(null);
@@ -33,12 +38,13 @@ return (
           <div key={item.show.id}>
             <h3>{item.show.name}</h3>
             {item.show.image && <img src={item.show.image.medium} alt={item.show.name} />}
-            <button>Review</button>
+            <ReviewModalWithButton name={item.show.name}/>
             <button>Add to Watchlist</button>
           </div>
         ))}
       </div>
     )}
+    
   </div>
 );
 };
