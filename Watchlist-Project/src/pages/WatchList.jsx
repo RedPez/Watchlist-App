@@ -1,6 +1,6 @@
 // WatchList.jsx
 import React, { useState, useEffect } from 'react';
-import ReviewButton from '../components/ReviewButton';
+import ReviewModalWithButton from '../components/ReviewModalWithButton';
 import RemoveButton from '../components/RemoveButton';
 
 const WatchList = () => {
@@ -28,7 +28,7 @@ const WatchList = () => {
             <h3>{item.title}</h3>
             {item.poster && <img src={item.poster} alt={item.title} />}
             <div>
-              <ReviewButton show={item} />
+              <ReviewModalWithButton show={item} />
               <RemoveButton showId={item.id} removeFromWatchlist={removeFromWatchlist} />
             </div>
           </li>
