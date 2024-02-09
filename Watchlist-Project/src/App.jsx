@@ -8,11 +8,10 @@ function App() {
 
   return (
     <>
-     
       <p className="read-the-docs">
-        App test
       </p>
       <Homepage/>
+
       <WatchList />
     </>
   )
