@@ -10,7 +10,7 @@ function App() {
     <>
       <p className="read-the-docs">
       </p>
-      <Homepage/>
+      <Homepage />
 
       <WatchList />
     </>
