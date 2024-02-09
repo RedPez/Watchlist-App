@@ -1,8 +1,7 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 
-const OpenButton = () => {
+
+const ReviewModalWithButton = (props) => {
 
   const [show, setShow] = useState(false);
 
@@ -14,7 +13,7 @@ const OpenButton = () => {
 
     <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{props.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
         <Modal.Footer>
@@ -30,4 +29,4 @@ const OpenButton = () => {
   )
 }
 
-export default OpenButton
+export default ReviewModalWithButton 
