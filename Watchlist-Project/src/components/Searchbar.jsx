@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+
 import ReviewModalWithButton from './ReviewModalWithButton';
 
 
-
+import AddButton from './AddButton';
 
 const Searchbar = () => {
 
@@ -38,8 +39,10 @@ return (
           <div key={item.show.id}>
             <h3>{item.show.name}</h3>
             {item.show.image && <img src={item.show.image.medium} alt={item.show.name} />}
+
             <ReviewModalWithButton name={item.show.name}/>
-            <button>Add to Watchlist</button>
+            <AddButton show={item.show} />
+
           </div>
         ))}
       </div>
