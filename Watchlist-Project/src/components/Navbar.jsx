@@ -7,18 +7,17 @@ function MyNavbar() {
   return (
     <>
       <Navbar>
-        <Container>
-          <Navbar.Brand href="#home">
+        <Container className="d-flex justify-content-between">
+          <Navbar.Brand href="#Home">
             <img
               alt=""
               src="../src/assets/images/site-logo.svg"
               width="150"
               height="60"
-              className=""
             />{" "}
           </Navbar.Brand>
           
-          <Nav className="justify-content-end">
+          <Nav>
             <Nav.Link href="#Home">Home</Nav.Link>
             <Nav.Link href="#MyReviews">My Reviews</Nav.Link>
             <Nav.Link href="#Watchlist">Watchlist</Nav.Link>
