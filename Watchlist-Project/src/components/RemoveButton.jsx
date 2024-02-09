@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const RemoveButton = () => {
+const RemoveButton = ({ showId, removeFromWatchlist }) => {
+  const handleRemove = () => {
+    removeFromWatchlist(showId);
+  };
+
   return (
-    <div>RemoveButton</div>
-  )
-}
+    <button onClick={handleRemove}>Remove</button>
+  );
+};
 
-export default RemoveButton
+export default RemoveButton;
