@@ -1,11 +1,11 @@
 import React from 'react';
-
+import './component.css';
 
 const Searchbar = (props) => {
 
 return (
   <form>
-  <div>
+  <div className='searchbar'>
     <input
       onChange={props.handleInputChange}
       value={props.search}
@@ -17,7 +17,7 @@ return (
     <button 
       onClick={props.handleSearchSubmit}
       type="submit"
-      className='btn btn-primary'
+      className='btn search-btn'
     >
       Search
       </button>
