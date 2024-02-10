@@ -5,7 +5,7 @@ const MyReviews = () => {
   return (
     <>
     <Navbar/> 
-    MyReviews
+    My Reviews
     </> 
 
   )
