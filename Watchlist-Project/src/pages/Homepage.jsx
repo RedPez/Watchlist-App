@@ -9,7 +9,6 @@ const Homepage = () => {
         <Navbar />
       </div>
       <div>
-        Homepage
         <SearchResultContainer />
       </div>
     </div>
