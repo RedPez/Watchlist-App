@@ -1,6 +1,6 @@
 import React from "react";
-import Searchbar from "../components/Searchbar";
 import Navbar from "../components/Navbar";
+import SearchResultContainer from "../components/SearchResultContainer";
 
 const Homepage = () => {
   return (
@@ -10,7 +10,7 @@ const Homepage = () => {
       </div>
       <div>
         Homepage
-        <Searchbar />
+        <SearchResultContainer />
       </div>
     </div>
   );
