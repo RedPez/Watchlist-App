@@ -1,4 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Francois+One&family=Lilita+One&display=swap');
+
 /* searchbar */
+.searchbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+#search {
+    border: solid 3px black;
+    height: 50px;
+    width: 300px;
+    padding-left: 10px;
+    font-family: "Lilita One";
+    font-size: 20px;
+}
+
+.search-btn {
+    background-color: black;
+    color: white;
+    font-family: "Lilita One";
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Hero */
+
 
 /* add to watchlist button */
 
