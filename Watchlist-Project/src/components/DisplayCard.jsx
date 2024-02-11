@@ -9,10 +9,10 @@ const DisplayCard = (props) => {
           <div key={result.show.id}>
             <h3>{result.show.name}</h3>
             {result.show.image && <img src={result.show.image.medium} alt={result.show.name} />}
-            <ReviewModalWithButton 
-            title={result.show.name}
-            />
+            <div>
+            <ReviewModalWithButton title={result.show.name}/>
             <AddButton show={result.show} />
+            </div>
             </div>
         ))}
     </div>
