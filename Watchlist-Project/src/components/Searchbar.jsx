@@ -19,7 +19,7 @@ return (
       type="submit"
       className='btn search-btn'
     >
-      Search
+      SEARCH
       </button>
 
     </div>
