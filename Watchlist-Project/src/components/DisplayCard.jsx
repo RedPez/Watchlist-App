@@ -13,19 +13,18 @@ const DisplayCard = (props) => {
           <Card className="single-card">
             {result.show.image && (
               <Card.Img
-                variant="top"
                 src={result.show.image.medium}
                 alt={result.show.name}
                 className="card-img"
               />
             )}
-            <div className="hover-text">
+            <Card.ImgOverlay className="hover-text">
               <Card.Title className="card-title">{result.show.name}</Card.Title>
               <div className="result-btns">
                 <ReviewModalWithButton title={result.show.name} />
                 <AddButton show={result.show} />
                 </div>
-            </div>
+            </Card.ImgOverlay>
           </Card>
         </Col>
       ))}

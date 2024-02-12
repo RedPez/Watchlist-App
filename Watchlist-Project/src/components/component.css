@@ -4,12 +4,14 @@
 .searchbar {
   display: flex;
   justify-content: center;
-  margin-top: 90px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  z-index: 2;
 }
 
 #search {
   border: solid 3px black;
-  height: 50px;
+  height: 60px;
   width: 400px;
   padding-left: 10px;
   font-family: "Comic Neue";
@@ -20,6 +22,8 @@
 .search-btn {
   background-color: black !important;
   color: white !important;
+  border: white 3px solid !important;
+  border-radius: 0 !important;
   font-family: "Francois One" !important;
   font-size: 25px !important;
   font-weight: bolder !important;
@@ -28,19 +32,42 @@
 }
 
 /* Hero */
-.hero-vid {
-  width: 65%;
-  height: 100vh;
+.hero-txt {
+  font-family: 'Comic Neue';
+  font-size: 18px;
+  text-align: center;
+  background-color: white;
+  border: solid 2px black;
+  width: 50%;
   margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  padding: 10px;
+}
+
+.brand, .sleep, .cta-txt {
+  font-weight: bold !important;
+}
+
+.cta-txt {
+  padding-top: 5px;
+  font-size: 19px;
+  color: #CB6CE6;
+}
+.hero-vid {
+  width: 55%;
+  padding-top: 25px;
+  margin: 0 auto;
+  margin-top: -39px;
 }
 
 /* modal */
 .modal-close-btn {
-
+color: black;
 }
 
 .modal-save-btn {
-  
+  color: black;
 }
 /* remove from watchlist button */
 
@@ -67,9 +94,13 @@
 }
 
 /* Back to the top of the page link */
-.top-link {
-  font-family: "Comic Neue";
+.pg-rights {
   font-size: 15px;
+}
+
+.top-link, .top-text {
+  font-family: "Comic Neue";
+  font-size: 14px;
   color: white;
   text-decoration: none;
 }

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&family=Francois+One&family=Lilita+One&display=swap");
 
+/* cards are scrolling vertically as well as horizontally */
 .row.flex-nowrap {
   overflow-x: auto;
   flex-wrap: nowrap;
@@ -7,10 +8,6 @@
 }
 
 .single-card {
-  /* width: 360px;
-  height: 400px; */
-  padding: 24px;
-  background: white;
   position: relative;
   transition: .6s ease-out;
   box-shadow: 0 10px 10px rgba (0,0,0,0.5);
@@ -50,20 +47,25 @@
   opacity: 0;
   transform: translateY(60px);
   transition: 0.5s;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
+/* Need to move title further down and sort out why buttons are not aligned */
 .card-title {
 font-family: "Anton";
 font-size: 35px !important;
 letter-spacing: 1px;
 margin: 0;
-display: flex;
-justify-content: center;
+text-align: center;
+width: 100% !important;
 }
 
 .result-btns {
   display: flex;
   justify-content: space-evenly;
+  width: 100% !important;
 }
 
 /* Hide scrollbar for WebKit (Chrome, Safari) */
@@ -89,13 +91,3 @@ justify-content: center;
 .row.flex-nowrap {
   -webkit-overflow-scrolling: touch; /* iOS */
 }
-
-/* .ReviewModalWithButton {
-  background-color: black !important;
-  color: white !important;
-  font-family: "Francois One" !important;
-  font-size: 25px !important;
-  font-weight: bolder !important;
-  margin-left: 10px;
-  letter-spacing: 1.25px;
-} */
