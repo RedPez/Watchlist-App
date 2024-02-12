@@ -7,14 +7,14 @@ import API from "../utils/API";
 const ReviewModalWithButton = (props) => {
   
 const [show, setShow] = useState(false);
-const [showSeasons, setShowSeasons] = useState([]);
-console.log(showSeasons)
+const [showDetails, setShowDetails] = useState([]);
+console.log(showDetails)
 const handleClose = () => setShow(false);
 const handleShow = async () => {
 
     try {
-        const response =  await API.getShowSeasons(props.show.id)
-        setShowSeasons(response.data);
+        const response =  await API.getShowDetails(props.show.name)
+        setShowDetails(response.data);
       } catch (error) {
        console.log(error)
       }
@@ -65,12 +65,12 @@ const handleShow = async () => {
         </Modal.Header>
         <Modal.Body>
 
-          <div className='modal-img'><img src={props.show.image.original} alt={props.show.name} /></div>
+          <div className='modal-img'>{props.show.image && <img src={props.show.image ? props.show.image.original : url("../assets/images/tv-show.png")} alt={props.show.name} />}</div>
           <div className='show-stats'>
-          <div>Date Released: {new Intl.DateTimeFormat('en-GB').format(new Date(props.show.premiered))}</div>
-          <div>No. of Seasons: {showSeasons.length}</div>
-          <div>Country of Origin: {props.show.network.country.name}</div>
-          <div>Genre: {props.show.genres.join(", ")}</div>
+          <div>Date Released: {showDetails.Released ? showDetails.Released : props.show.premiered}</div>
+          <div>No. of Seasons: {showDetails.totalSeasons ? showDetails.totalSeasons : "Data not available"}</div>
+          <div>Country of Origin: {showDetails.Country ? showDetails.Country : "Data not available" }</div>
+          <div>Genre: { showDetails.Genre ? showDetails.Genre : "Data not available" }</div>
           </div>
 
 
