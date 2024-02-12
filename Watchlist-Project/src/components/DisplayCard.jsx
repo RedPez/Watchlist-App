@@ -13,14 +13,14 @@ const DisplayCard = (props) => {
             {result.show.image && (
               <Card.Img
                 variant="top"
-                src={result.show.image.medium}
+                src={result.show.image.original}
                 alt={result.show.name}
               />
             )}
             <Card.Body>
               <Card.Title>{result.show.name}</Card.Title>
               <div className="d-flex justify-content-between align-items-center">
-                <ReviewModalWithButton title={result.show.name} />
+                <ReviewModalWithButton show={result.show} />
                 <AddButton show={result.show} />
               </div>
             </Card.Body>
