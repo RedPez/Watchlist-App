@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&family=Francois+One&family=Lilita+One&display=swap");
+
+.row.flex-nowrap {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.Card {
+  width: 100%;
+}
+
+/* Hide scrollbar for WebKit (Chrome, Safari) */
+.row.flex-nowrap::-webkit-scrollbar {
+  height: 20px; /* width of the scrollbar */
+}
+
+/* Track */
+.row.flex-nowrap::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the scrollbar track */
+}
+
+/* Handle */
+.row.flex-nowrap::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar handle */
+}
+
+/* Handle on hover */
+.row.flex-nowrap::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scrollbar handle on hover */
+}
+
+.row.flex-nowrap {
+  -webkit-overflow-scrolling: touch; /* iOS */
+}
+
+.ReviewModalWithButton {
+  background-color: black !important;
+  color: white !important;
+  font-family: "Francois One" !important;
+  font-size: 25px !important;
+  font-weight: bolder !important;
+  margin-left: 10px;
+  letter-spacing: 1.25px;
+}

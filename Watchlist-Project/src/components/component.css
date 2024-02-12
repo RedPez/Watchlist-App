@@ -36,34 +36,15 @@
 /* modal */
 .modal-img {
 
-}
-
-.show-stats {
-
-}
-
-.character-rating {
-
-}
-
-.plot-rating {
-
-}
-
-.writing-rating {
-
-}
-
-.pace-rating {
-
-}
-
-.review-txt {
-
-}
-
-.overall-rating {
-  
+/* review show button (sits within the ReviewModalWithButton component */
+.review-btn {
+  background-color: black !important;
+  color: white !important;
+  font-family: "Francois One" !important;
+  font-size: 25px !important;
+  font-weight: bolder !important;
+  margin-left: 10px;
+  letter-spacing: 1.25px;
 }
 /* add to watchlist button */
 
