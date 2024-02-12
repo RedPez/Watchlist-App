@@ -1,45 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&family=Francois+One&family=Lilita+One&display=swap");
 
+/* cards are scrolling vertically as well as horizontally */
 .row.flex-nowrap {
   overflow-x: auto;
   flex-wrap: nowrap;
   max-width: 100%;
 }
 
-.Card {
+.single-card {
+  position: relative;
+  transition: .6s ease-out;
+  box-shadow: 0 10px 10px rgba (0,0,0,0.5);
+}
+
+.single-card:hover {
+  transform: translateY(15px);
+}
+
+.single-card:hover::before {
+  opacity: 1;
+}
+
+.single-card:hover .hover-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.single-card::before {
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  display: inline-block;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.hover-text {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.5s;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Need to move title further down and sort out why buttons are not aligned */
+.card-title {
+font-family: "Anton";
+font-size: 35px !important;
+letter-spacing: 1px;
+margin: 0;
+text-align: center;
+width: 100% !important;
+}
+
+.result-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100% !important;
 }
 
 /* Hide scrollbar for WebKit (Chrome, Safari) */
 .row.flex-nowrap::-webkit-scrollbar {
-  height: 20px; /* width of the scrollbar */
+  height: 0px; /* width of the scrollbar */
 }
 
 /* Track */
 .row.flex-nowrap::-webkit-scrollbar-track {
-  background: #f1f1f1; /* color of the scrollbar track */
+  background: transparent; /* color of the scrollbar track */
 }
 
 /* Handle */
 .row.flex-nowrap::-webkit-scrollbar-thumb {
-  background: #888; /* color of the scrollbar handle */
+  background: transparent; /* color of the scrollbar handle */
 }
 
 /* Handle on hover */
 .row.flex-nowrap::-webkit-scrollbar-thumb:hover {
-  background: #555; /* color of the scrollbar handle on hover */
+  background: transparent; /* color of the scrollbar handle on hover */
 }
 
 .row.flex-nowrap {
   -webkit-overflow-scrolling: touch; /* iOS */
-}
-
-.ReviewModalWithButton {
-  background-color: black !important;
-  color: white !important;
-  font-family: "Francois One" !important;
-  font-size: 25px !important;
-  font-weight: bolder !important;
-  margin-left: 10px;
-  letter-spacing: 1.25px;
 }

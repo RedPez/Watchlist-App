@@ -55,8 +55,11 @@ const handleShow = async () => {
 
   return (
     <>
-    <Button variant="primary" onClick={handleShow}>Review</Button>
-    <Modal show={show} onHide={handleClose}>
+      <Button className="review-btn" onClick={handleShow}>
+        Review
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{props.show.name}</Modal.Title>
         </Modal.Header>
@@ -103,10 +106,10 @@ const handleShow = async () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button className="modal-close-btn" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleSaveChanges}>
+          <Button className="modal-save-btn" onClick={handleSaveChanges}>
             Save Changes
           </Button>
         </Modal.Footer>

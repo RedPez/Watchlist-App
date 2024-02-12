@@ -43,12 +43,12 @@ const handleSearchSubmit = (event) => {
   return (
     <div>
         <Navbar />
+        <Hero />
         <Searchbar 
         search={searchData.search}
         handleSearchSubmit={handleSearchSubmit}
         handleInputChange={handleInputChange}
         />
-        <Hero />
         <DisplayCard 
         results={searchData.results}
         />

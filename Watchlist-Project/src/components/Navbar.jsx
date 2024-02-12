@@ -15,9 +15,8 @@ function MyNavbar() {
           <Navbar.Brand href="/">
             <img
               alt=""
-              src="../src/assets/images/site-logo.svg"
-              width="150"
-              height="60"
+              src="../src/assets/images/site-logo.png"
+              width="115"
             />{" "}
           </Navbar.Brand>
 

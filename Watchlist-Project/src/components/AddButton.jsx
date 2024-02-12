@@ -24,7 +24,7 @@ const AddButton = ({ show }) => {
 
   return (
     <div>
-      <button onClick={handleAddToWatchlist}>Add to Watchlist</button>
+      <button className="add-btn" onClick={handleAddToWatchlist}>Add to Watchlist</button>
     </div>
   );
 };
