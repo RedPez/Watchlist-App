@@ -1,22 +1,34 @@
-import React from 'react'
-import ReviewModalWithButton from './ReviewModalWithButton'
-import AddButton from './AddButton'
+import React from "react";
+import { Card, Col } from "react-bootstrap";
+import ReviewModalWithButton from "./ReviewModalWithButton";
+import AddButton from "./AddButton";
+import "./DisplayCard.css";
 
 const DisplayCard = (props) => {
   return (
-    <div>
-       {props.results.map((result) => (
-          <div key={result.show.id}>
-            <h3>{result.show.name}</h3>
-            {result.show.image && <img src={result.show.image.medium} alt={result.show.name} />}
-            <div>
-            <ReviewModalWithButton title={result.show.name}/>
-            <AddButton show={result.show} />
-            </div>
-            </div>
-        ))}
+    <div className="row flex-nowrap overflow-auto">
+      {props.results.map((result) => (
+        <Col key={result.show.id} xs={12} md={6} lg={4} xl={3} className="mb-3">
+          <Card>
+            {result.show.image && (
+              <Card.Img
+                variant="top"
+                src={result.show.image.medium}
+                alt={result.show.name}
+              />
+            )}
+            <Card.Body>
+              <Card.Title>{result.show.name}</Card.Title>
+              <div className="d-flex justify-content-between align-items-center">
+                <ReviewModalWithButton title={result.show.name} />
+                <AddButton show={result.show} />
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default DisplayCard
+export default DisplayCard;

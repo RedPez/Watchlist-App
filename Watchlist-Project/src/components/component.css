@@ -35,8 +35,16 @@
 
 /* modal */
 
-
-
+/* review show button (sits within the ReviewModalWithButton component */
+.review-btn {
+  background-color: black !important;
+  color: white !important;
+  font-family: "Francois One" !important;
+  font-size: 25px !important;
+  font-weight: bolder !important;
+  margin-left: 10px;
+  letter-spacing: 1.25px;
+}
 /* add to watchlist button */
 
 /* remove from watchlist button */
