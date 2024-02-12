@@ -21,8 +21,6 @@ const handleShow = async () => {
     
   setShow(true)};
 
-
-  const [show, setShow] = useState(false);
   const [reviewText, setReviewText] = useState(""); // State for review text
 
 
