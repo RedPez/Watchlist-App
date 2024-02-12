@@ -17,7 +17,7 @@
 }
 
 /* review show button sits within the ReviewModalWithButton component */
-.search-btn, .review-btn {
+.search-btn {
   background-color: black !important;
   color: white !important;
   font-family: "Francois One" !important;
@@ -35,14 +35,27 @@
 }
 
 /* modal */
-.modal-img {
+.modal-close-btn {
 
 }
-/* add to watchlist button */
 
+.modal-save-btn {
+  
+}
 /* remove from watchlist button */
 
-/* review tv show button */
+/* review tv show and add to watchlist buttons */
+.review-btn, .add-btn {
+  background-color: transparent !important;
+  color: white !important;
+  font-family: "Francois One" !important;
+  font-size: 20px !important;
+  border: none !important;
+}
+
+.review-btn:hover, .add-btn:hover {
+  opacity: 0.6;
+}
 
 /* footer */
 .footer-section {

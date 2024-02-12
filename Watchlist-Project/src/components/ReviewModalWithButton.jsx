@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import RatingStarInput from "./RatingStarInput";
 
+
 const ReviewModalWithButton = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -10,7 +11,7 @@ const ReviewModalWithButton = (props) => {
 
   return (
     <>
-      <Button class="review-btn" variant="primary" onClick={handleShow}>
+      <Button className="review-btn" onClick={handleShow}>
         Review
       </Button>
 
@@ -45,10 +46,10 @@ const ReviewModalWithButton = (props) => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button className="modal-close-btn" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button className="modal-save-btn" onClick={handleClose}>
             Save Changes
           </Button>
         </Modal.Footer>
