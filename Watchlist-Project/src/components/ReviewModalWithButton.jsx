@@ -5,8 +5,39 @@ import RatingStarInput from "./RatingStarInput";
 
 const ReviewModalWithButton = (props) => {
   const [show, setShow] = useState(false);
+  const [reviewText, setReviewText] = useState(""); // State for review text
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleSaveChanges = () => {
+    // Collect all data
+    const reviewData = {
+      title: props.title,
+      image: props.image, // Pass image from parent component
+      characterRating: 0, // Update with actual character rating
+      plotRating: 0, // Update with actual plot rating
+      writingRating: 0, // Update with actual writing rating
+      paceRating: 0, // Update with actual pace rating
+      reviewText: reviewText,
+      overallRating: 0 // Update with actual overall rating
+    };
+
+    // Retrieve existing reviews from local storage or initialize an empty array
+    const existingReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    // Add new review data to the array
+    existingReviews.push(reviewData);
+
+    // Sort reviews by overall rating in descending order
+    existingReviews.sort((a, b) => b.overallRating - a.overallRating);
+
+    // Update local storage with the updated reviews array
+    localStorage.setItem("reviews", JSON.stringify(existingReviews));
+
+    // Close the modal
+    handleClose();
+  };
 
   return (
     <>
@@ -19,13 +50,10 @@ const ReviewModalWithButton = (props) => {
           <Modal.Title>{props.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="modal-img">X We need to add image here X</div>
-          <div className="show-stats">
-            <div>No. of Episodes:</div>
-            <div>No. of Seasons:</div>
-            <div>Country of Origin:</div>
-            <div>Genre:</div>
-          </div>
+          {/* Add image display */}
+          <div className="modal-img"></div>
+          
+          
           <div className="character-rating">
             {" "}
             Characters: <RatingStarInput />
@@ -39,7 +67,14 @@ const ReviewModalWithButton = (props) => {
           <div className="pace-rating">
             Pace: <RatingStarInput />{" "}
           </div>
+
           <div className="review-txt">Write your review here: </div>
+          {/* This is the text input field for the review  */}
+          <textarea
+            value={reviewText}
+            onChange={(e) => setReviewText(e.target.value)}
+          />
+
           <div className="overall-rating">
             Overall rating: <RatingStarInput />
           </div>
@@ -48,7 +83,7 @@ const ReviewModalWithButton = (props) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleSaveChanges}>
             Save Changes
           </Button>
         </Modal.Footer>
