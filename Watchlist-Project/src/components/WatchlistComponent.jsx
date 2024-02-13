@@ -7,7 +7,6 @@ const WatchList = (props) => {
   console.log(props)
   return (
     <div>
-      <h2>Watchlist</h2>
       <div>
       <DisplayCard
         results={props.watchlist}

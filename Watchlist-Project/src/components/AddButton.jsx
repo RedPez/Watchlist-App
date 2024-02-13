@@ -32,7 +32,7 @@ const AddButton = ({ show }) => {
 
   return (
     <div>
-      <button className="add-btn" onClick={handleAddToWatchlist}>Add to Watchlist</button>
+      <button className="add-btn" onClick={handleAddToWatchlist}>	&#65291; Add to Watchlist</button>
     </div>
   );
 };

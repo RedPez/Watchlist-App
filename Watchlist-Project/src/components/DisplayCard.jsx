@@ -4,12 +4,13 @@ import ReviewModalWithButton from "./ReviewModalWithButton";
 import AddButton from "./AddButton";
 import "./DisplayCard.css";
 import "./component.css";
-import tvImage from "../assets/images/site-logo.png"
+import tvImage from "../assets/images/site-logo.png";
 
 const DisplayCard = (props) => {
   return (
     <div className="row flex-nowrap overflow-auto">
       {props.results.map((result) => (
+
         <Col key={result.id} xs={12} md={6} lg={4} xl={3} className="mb-3">
           <Card className="single-card">
               <Card.Img 
@@ -19,9 +20,11 @@ const DisplayCard = (props) => {
                 className="card-img"
               />
             
+
             <Card.ImgOverlay className="hover-text">
               <Card.Title className="card-title">{result.name}</Card.Title>
               <div className="result-btns">
+                
                 {props.action && <props.action 
                 show={result}
                 />}
@@ -29,6 +32,7 @@ const DisplayCard = (props) => {
                 <ReviewModalWithButton show={result} />
                 
                 </div>
+
             </Card.ImgOverlay>
           </Card>
         </Col>

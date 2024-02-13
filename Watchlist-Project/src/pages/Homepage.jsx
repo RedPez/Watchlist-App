@@ -52,6 +52,7 @@ const handleSearchSubmit = (event) => {
         handleInputChange={handleInputChange}
         />
         <DisplayCard
+
         results={searchData.results}
         action={({show}) => <AddButton show={show} />}
 

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { FaStar } from 'react-icons/fa';
+import FilterShows from './FilterShows'; 
 
 
 const ReviewComponent = () => {
@@ -28,21 +30,36 @@ const ReviewComponent = () => {
     localStorage.setItem("reviews", JSON.stringify(updatedReviews));
   };
 
+    // Function to render star icons based on overall rating
+    const renderStarIcons = (rating) => {
+        const stars = [];
+        for (let i = 0; i < rating; i++) {
+          stars.push(<FaStar key={i} color="gold" style={{ display: 'inline-block' }} />);
+        }
+        return <div>{stars}</div>;
+      };
+
   return (
     <div>
+
       <h2>Reviews</h2>
+      <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />
+
       <ul>
         {reviews.map((review, index) => (
           <li key={index}>
             <h3>{review.title}</h3>
-            
-            <p>Characters Rating: {review.characterRating}</p>
-            <p>Plot Rating: {review.plotRating}</p>
-            <p>Writing Rating: {review.writingRating}</p>
-            <p>Pace Rating: {review.paceRating}</p>
+            {review.poster && <img src={review.poster} alt={review.title} />}
+            <p>Characters Rating: {renderStarIcons(review.characterRating)}</p>
+            <p>Plot Rating: {renderStarIcons(review.plotRating)}</p>
+            <p>Writing Rating: {renderStarIcons(review.writingRating)}</p>
+            <p>Pace Rating: {renderStarIcons(review.paceRating)}</p>
             <p>{review.reviewText}</p>
-            <p>Overall Rating: {review.overallRating}</p>
-            
+           
+            <div>
+              Overall Rating: {renderStarIcons(review.overallRating)}
+            </div>
+          
             <button onClick={() => handleEditReview(index)}>Edit</button>
             <button onClick={() => handleDeleteReview(index)}>Delete</button>
           </li>
