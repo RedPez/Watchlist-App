@@ -41,8 +41,10 @@ const ReviewComponent = () => {
 
   return (
     <div>
+
       <h2>Reviews</h2>
       <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />
+
       <ul>
         {reviews.map((review, index) => (
           <li key={index}>
