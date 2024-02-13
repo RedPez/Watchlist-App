@@ -4,11 +4,17 @@ import Modal from 'react-bootstrap/Modal';
 import RatingStarInput from './RatingStarInput';
 import API from "../utils/API";
 import tvImage from "../assets/images/tv-show.png"
+import ReviewComponent from './ReviewComponent';
 
 const ReviewModalWithButton = (props) => {
   
 const [show, setShow] = useState(false);
 const [showDetails, setShowDetails] = useState([]);
+const [characterRating, setCharacterRating] = useState(0);
+const [plotRating, setPlotRating] = useState(0);
+const [writingRating, setWritingRating] = useState(0);
+const [paceRating, setPaceRating] = useState(0);
+const [overallRating, setOverallRating] = useState(0);
 console.log(showDetails)
 const handleClose = () => setShow(false);
 const handleShow = async () => {
@@ -30,12 +36,12 @@ const handleShow = async () => {
     const reviewData = {
       title: props.title,
       image: props.image, // Pass image from parent component
-      characterRating: 0, // Update with actual character rating
-      plotRating: 0, // Update with actual plot rating
-      writingRating: 0, // Update with actual writing rating
-      paceRating: 0, // Update with actual pace rating
-      reviewText: reviewText,
-      overallRating: 0 // Update with actual overall rating
+      characterRating, 
+      plotRating, 
+      writingRating, 
+      paceRating, 
+      reviewText,
+      overallRating
     };
 
     // Retrieve existing reviews from local storage or initialize an empty array
@@ -77,16 +83,16 @@ const handleShow = async () => {
 
           <div className="character-rating">
             {" "}
-            Characters: <RatingStarInput />
+            Characters: <RatingStarInput value={characterRating} onChange={setCharacterRating} />
           </div>
           <div className="plot-rating">
-            Plot/Content: <RatingStarInput />
+            Plot/Content: <RatingStarInput value={plotRating} onChange={setPlotRating} />
           </div>
           <div className="writing-rating">
-            Writing: <RatingStarInput />
+            Writing: <RatingStarInput value={writingRating} onChange={setWritingRating} />
           </div>
           <div className="pace-rating">
-            Pace: <RatingStarInput />{" "}
+            Pace: <RatingStarInput value={paceRating} onChange={setPaceRating} />{" "}
           </div>
 
           <div className="review-txt">Write your review here: 
@@ -103,7 +109,8 @@ const handleShow = async () => {
           </div>
 
           <div className="overall-rating">
-            Overall rating: <RatingStarInput />
+            Overall rating: <RatingStarInput value={overallRating} onChange={setOverallRating} />
+           
           </div>
         </Modal.Body>
         <Modal.Footer>
