@@ -30,7 +30,6 @@ const ReviewComponent = () => {
 
   return (
     <div>
-      <h2>Reviews</h2>
       <ul>
         {reviews.map((review, index) => (
           <li key={index}>
