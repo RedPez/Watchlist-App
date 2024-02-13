@@ -14,13 +14,21 @@ const AddButton = ({ show }) => {
   const saveToWatchlist = (data) => {
     const existingWatchlist =
       JSON.parse(localStorage.getItem("watchlist")) || [];
-
-    existingWatchlist.push(data);
-
-    // Update localStorage with the updated watchlist
-    localStorage.setItem("watchlist", JSON.stringify(existingWatchlist));
-    console.log("Added to watchlist:", data);
+  
+    // We check if the show already exists in the watchlist using the some method, it basicaly checks whether at least one element in an array satisfies a specific condition
+    const showExists = existingWatchlist.some(item => item.id === data.id);
+  
+    if (!showExists) {
+      existingWatchlist.push(data);
+  
+      // Updates localStorage with the updated watchlist only if the show id is not in the localStorage
+      localStorage.setItem("watchlist", JSON.stringify(existingWatchlist));
+      console.log("Added to watchlist:", data);
+    } else {
+      console.log("Show already exists in watchlist:", data);
+    }
   };
+  
 
   return (
     <div>
