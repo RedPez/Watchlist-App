@@ -4,6 +4,7 @@ import ReviewModalWithButton from "./ReviewModalWithButton";
 import AddButton from "./AddButton";
 import "./DisplayCard.css";
 import "./component.css";
+import tvImage from "../assets/images/site-logo.png"
 
 const DisplayCard = (props) => {
   return (
@@ -12,8 +13,9 @@ const DisplayCard = (props) => {
         <Col key={result.show.id} xs={12} md={6} lg={4} xl={3} className="mb-3">
           <Card className="single-card">
             {result.show.image && (
-              <Card.Img
-                src={result.show.image.original}
+              <Card.Img 
+              // we need to change image for shows without images from the API
+                src={result.show.image.original ? result.show.image.original : tvImage}
                 alt={result.show.name}
                 className="card-img"
               />

@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import RatingStarInput from './RatingStarInput';
 import API from "../utils/API";
+import tvImage from "../assets/images/tv-show.png"
 
 const ReviewModalWithButton = (props) => {
   
@@ -64,8 +65,8 @@ const handleShow = async () => {
           <Modal.Title>{props.show.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-
-          <div className='modal-img'>{props.show.image && <img src={props.show.image ? props.show.image.original : url("../assets/images/tv-show.png")} alt={props.show.name} />}</div>
+         {/* we need to change image for shows without images from the API */}
+          <div className='modal-img'>{props.show.image && <img src={props.show.image ? props.show.image.original : tvImage} alt={props.show.name} />}</div>
           <div className='show-stats'>
           <div>Date Released: {showDetails.Released ? showDetails.Released : props.show.premiered}</div>
           <div>No. of Seasons: {showDetails.totalSeasons ? showDetails.totalSeasons : "Data not available"}</div>
