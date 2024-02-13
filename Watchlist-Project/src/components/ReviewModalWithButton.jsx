@@ -66,7 +66,7 @@ const handleShow = async () => {
         </Modal.Header>
         <Modal.Body>
          {/* we need to change image for shows without images from the API */}
-          <div className='modal-img'>{props.show.image && <img src={props.show.image ? props.show.image.original : tvImage} alt={props.show.name} />}</div>
+          <div className='modal-img'> <img src={props.show.image ? props.show.image.original : tvImage} alt={props.show.name} /></div>
           <div className='show-stats'>
           <div>Date Released: {showDetails.Released ? showDetails.Released : props.show.premiered}</div>
           <div>No. of Seasons: {showDetails.totalSeasons ? showDetails.totalSeasons : "Data not available"}</div>

@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import Searchbar from "../components/Searchbar";
 import DisplayCard from "../components/DisplayCard";
 import API from "../utils/API";
+import ReviewModalWithButton from "../components/ReviewModalWithButton";
+import AddButton from "../components/AddButton";
 
 const Homepage = () => {
 
@@ -17,7 +19,7 @@ const Homepage = () => {
 const searchTvShow = async (query) => {
     try {
         const response =  await API.search(query)
-        setSearchData({ ...searchData, results: response.data });
+        setSearchData({ ...searchData, results: response.data.map((item) => item.show) });
       } catch (error) {
        console.log(error)
       }
@@ -49,9 +51,12 @@ const handleSearchSubmit = (event) => {
         handleSearchSubmit={handleSearchSubmit}
         handleInputChange={handleInputChange}
         />
-        <DisplayCard 
+        <DisplayCard
         results={searchData.results}
-        />
+        action={({show}) => <AddButton show={show} />}
+
+       />
+
         <Footer/>
     </div>
   );

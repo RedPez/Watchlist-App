@@ -4,8 +4,8 @@ const AddButton = ({ show }) => {
   const handleAddToWatchlist = () => {
     const watchlistData = {
       id: show.id,
-      title: show.name,
-      poster: show.image ? show.image.original : null,
+      name: show.name,
+      image: {medium: show.image.medium, original: show.image.original},
     };
 
     saveToWatchlist(watchlistData);

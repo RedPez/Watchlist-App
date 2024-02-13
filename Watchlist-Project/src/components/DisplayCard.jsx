@@ -10,21 +10,24 @@ const DisplayCard = (props) => {
   return (
     <div className="row flex-nowrap overflow-auto">
       {props.results.map((result) => (
-        <Col key={result.show.id} xs={12} md={6} lg={4} xl={3} className="mb-3">
+        <Col key={result.id} xs={12} md={6} lg={4} xl={3} className="mb-3">
           <Card className="single-card">
-            {result.show.image && (
               <Card.Img 
               // we need to change image for shows without images from the API
-                src={result.show.image.original ? result.show.image.original : tvImage}
-                alt={result.show.name}
+                src={result.image?.original ? result.image.original : tvImage}
+                alt={result.name}
                 className="card-img"
               />
-            )}
+            
             <Card.ImgOverlay className="hover-text">
-              <Card.Title className="card-title">{result.show.name}</Card.Title>
+              <Card.Title className="card-title">{result.name}</Card.Title>
               <div className="result-btns">
-                <ReviewModalWithButton show={result.show} />
-                <AddButton show={result.show} />
+                {props.action && <props.action 
+                show={result}
+                />}
+                
+                <ReviewModalWithButton show={result} />
+                
                 </div>
             </Card.ImgOverlay>
           </Card>
