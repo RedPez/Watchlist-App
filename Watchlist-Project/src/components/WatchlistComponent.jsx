@@ -6,7 +6,6 @@ import RemoveButton from './RemoveButton';
 const WatchList = (props) => {
   return (
     <div>
-      <h2>Watchlist</h2>
       <div>
         {props.watchlist.map(item => (
           <div key={item.id}>

@@ -45,11 +45,10 @@
   z-index: 3;
   color: white;
   opacity: 0;
-  transform: translateY(60px);
+  /* transform: translateY(60px); */
   transition: 0.5s;
   display: flex;
   align-items: flex-end;
-  flex-wrap: wrap;
 }
 
 /* Need to move title further down and sort out why buttons are not aligned */
@@ -60,12 +59,14 @@ letter-spacing: 1px;
 margin: 0;
 text-align: center;
 width: 100% !important;
+display: none !important;
 }
 
 .result-btns {
   display: flex;
   justify-content: space-evenly;
   width: 100% !important;
+  align-items: center;
 }
 
 /* Hide scrollbar for WebKit (Chrome, Safari) */

@@ -7,7 +7,7 @@ const MyReviews = () => {
   return (
     <>
     <Navbar/> 
-    My Reviews
+    <h2>My Reviews</h2>
     <ReviewComponent/> 
     <Footer/>
     </> 

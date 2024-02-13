@@ -56,24 +56,26 @@ const handleShow = async () => {
   return (
     <>
       <Button className="review-btn" onClick={handleShow}>
-        Review
+      ✐ Review
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{props.show.name}</Modal.Title>
+      <Modal show={show} onHide={handleClose} size="md">
+        <Modal.Header closeButton className='modal-header'>
+          <Modal.Title className='modal-title'>{props.show.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-
+          <div className='modal-container'>
           <div className='modal-img'>{props.show.image && <img src={props.show.image ? props.show.image.original : url("../assets/images/tv-show.png")} alt={props.show.name} />}</div>
           <div className='show-stats'>
-          <div>Date Released: {showDetails.Released ? showDetails.Released : props.show.premiered}</div>
-          <div>No. of Seasons: {showDetails.totalSeasons ? showDetails.totalSeasons : "Data not available"}</div>
-          <div>Country of Origin: {showDetails.Country ? showDetails.Country : "Data not available" }</div>
-          <div>Genre: { showDetails.Genre ? showDetails.Genre : "Data not available" }</div>
+          <div> - Date Released: {showDetails.Released ? showDetails.Released : props.show.premiered}</div>
+          <div> - No. of Seasons: {showDetails.totalSeasons ? showDetails.totalSeasons : "Data not available"}</div>
+          <div> - Country of Origin: {showDetails.Country ? showDetails.Country : "Data not available" }</div>
+          <div> - Genre: { showDetails.Genre ? showDetails.Genre : "Data not available" }</div>
+          </div>
           </div>
 
-
+          <div className='rating-cont'>
+            <div className='star-grid'>
           <div className="character-rating">
             {" "}
             Characters: <RatingStarInput />
@@ -87,8 +89,10 @@ const handleShow = async () => {
           <div className="pace-rating">
             Pace: <RatingStarInput />{" "}
           </div>
+          </div>
 
-          <div className="review-txt">Write your review here: 
+          <div className="review-txt">
+            Write your review here:
           <textarea 
           rows="4" 
           cols="50" 
@@ -96,16 +100,17 @@ const handleShow = async () => {
           form="userform"
           value={reviewText}
           onChange={(e) => setReviewText(e.target.value)}
-          style={{border: "1px solid black"}}
+          style={{border: "2px solid black"}}
           >
           </textarea>
           </div>
 
           <div className="overall-rating">
-            Overall rating: <RatingStarInput />
+            Overall rating: &nbsp; <RatingStarInput />
+          </div>
           </div>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className='modal-footer'>
           <Button className="modal-close-btn" onClick={handleClose}>
             Close
           </Button>
