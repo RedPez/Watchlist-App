@@ -33,7 +33,7 @@
 
 /* Hero */
 .hero-txt {
-  font-family: 'Comic Neue';
+  font-family: "Comic Neue";
   font-size: 18px;
   text-align: center;
   background-color: white;
@@ -45,14 +45,16 @@
   padding: 10px;
 }
 
-.brand, .sleep, .cta-txt {
+.brand,
+.sleep,
+.cta-txt {
   font-weight: bold !important;
 }
 
 .cta-txt {
   padding-top: 5px;
   font-size: 19px;
-  color: #CB6CE6;
+  color: #cb6ce6;
 }
 .hero-vid {
   width: 55%;
@@ -63,7 +65,7 @@
 
 /* modal */
 .modal-close-btn {
-color: black;
+  color: black;
 }
 
 .modal-save-btn {
@@ -72,7 +74,8 @@ color: black;
 /* remove from watchlist button */
 
 /* review tv show and add to watchlist buttons */
-.review-btn, .add-btn {
+.review-btn,
+.add-btn {
   background-color: transparent !important;
   color: white !important;
   font-family: "Francois One" !important;
@@ -80,7 +83,8 @@ color: black;
   border: none !important;
 }
 
-.review-btn:hover, .add-btn:hover {
+.review-btn:hover,
+.add-btn:hover {
   opacity: 0.6;
 }
 
@@ -93,12 +97,23 @@ color: black;
   font-family: "Comic Neue";
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer-wrapper {
+  margin-top: auto;
+}
+
 /* Back to the top of the page link */
 .pg-rights {
   font-size: 15px;
 }
 
-.top-link, .top-text {
+.top-link,
+.top-text {
   font-family: "Comic Neue";
   font-size: 14px;
   color: white;

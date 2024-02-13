@@ -1,4 +1,5 @@
 import React from "react";
+import "./component.css";
 
 const Footer = () => {
   return (
@@ -23,7 +24,10 @@ const Footer = () => {
         {/* 
       </section> */}
 
-        <h4 className="pg-rights"> © 2024 The Rotten Tomatoes | All Rights Reserved </h4>
+        <h4 className="pg-rights">
+          {" "}
+          © 2024 The Rotten Tomatoes | All Rights Reserved{" "}
+        </h4>
         <a href="#top" className="top-link">
           {" "}
           <h5 className="top-text"> Back to the top ↑ </h5>{" "}
