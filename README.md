@@ -49,6 +49,7 @@ This project was created with:
 - TV Maze API
 - API Ninjas
 - Canva
+- Google fonts
 
 ### User Story
 
