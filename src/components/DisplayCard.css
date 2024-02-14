@@ -53,27 +53,26 @@
 
 /* Card image styling */
 
- .card-img-container {
+.card-img-container {
   height: 400px !important;
   width: 100% !important;
-  overflow: hidden !important;  /* Hide any overflow to maintain aspect ratio   */
+  overflow: hidden !important; /* Hide any overflow to maintain aspect ratio   */
+}
 
-} 
-
- .card-img {
-  width: 50%;   /* Ensure the image takes up the full width of its container    */
+.card-img {
+  width: 50%; /* Ensure the image takes up the full width of its container    */
   height: 450px; /* Allow the height to adjust proportionally based on the width */
-} 
+}
 
 /* Need to move title further down and sort out why buttons are not aligned */
 .card-title {
-font-family: "Anton";
-font-size: 35px !important;
-letter-spacing: 1px;
-margin: 0;
-text-align: center;
-width: 100% !important;
-display: none !important;
+  font-family: "Anton";
+  font-size: 35px !important;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+  width: 100% !important;
+  display: none !important;
 }
 
 .result-btns {
@@ -85,24 +84,21 @@ display: none !important;
 
 /* Hide scrollbar for WebKit (Chrome, Safari) */
 .row.flex-nowrap::-webkit-scrollbar {
-  height: 0px; /* width of the scrollbar */
+  width: 8px; /* width of the scrollbar */
 }
 
 /* Track */
 .row.flex-nowrap::-webkit-scrollbar-track {
-  background: transparent; /* color of the scrollbar track */
+  background: #f1f1f1; /* color of the scrollbar track */
 }
 
 /* Handle */
 .row.flex-nowrap::-webkit-scrollbar-thumb {
-  background: transparent; /* color of the scrollbar handle */
+  background: #555; /* color of the scrollbar handle */
+  border-radius: 4px; /* border radius of the scrollbar handle */
 }
 
 /* Handle on hover */
 .row.flex-nowrap::-webkit-scrollbar-thumb:hover {
-  background: transparent; /* color of the scrollbar handle on hover */
-}
-
-.row.flex-nowrap {
-  -webkit-overflow-scrolling: touch; /* iOS */
+  background: #888; /* color of the scrollbar handle on hover */
 }
