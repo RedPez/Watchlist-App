@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Footer from "../components/Footer";
 import Searchbar from "../components/Searchbar";
 import DisplayCards from "../components/DisplayCards";
 import API from "../utils/API";
