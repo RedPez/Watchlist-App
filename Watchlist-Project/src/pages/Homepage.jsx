@@ -54,7 +54,6 @@ const handleSearchSubmit = (event) => {
         <DisplayCard
         results={searchData.results}
         action={({show}) => <AddButton show={show} />}
-
        />
 
         <Footer/>

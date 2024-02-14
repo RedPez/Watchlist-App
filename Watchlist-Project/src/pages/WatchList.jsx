@@ -22,6 +22,7 @@ const WatchList = () => {
   return (
     <>
     <Navbar/> 
+    <h2>My Watchlist</h2>
     <WatchlistComponent 
     watchlist={watchlist}
     removeFromWatchlist={removeFromWatchlist}

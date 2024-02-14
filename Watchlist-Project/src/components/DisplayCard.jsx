@@ -4,7 +4,7 @@ import ReviewModalWithButton from "./ReviewModalWithButton";
 import AddButton from "./AddButton";
 import "./DisplayCard.css";
 import "./component.css";
-import tvImage from "../assets/images/site-logo.png"
+import tvImage from "../assets/images/site-logo.png";
 
 const DisplayCard = (props) => {
   return (
