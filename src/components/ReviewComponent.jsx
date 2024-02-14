@@ -55,9 +55,12 @@ const ReviewComponent = () => {
             image={{original: review.image}}
             review={review}
             id={review.id}
-            action={() => <button onClick={() => handleDeleteReview(index)} className="remove-btn">✘ Remove</button>}
+
+            buttonName= {"✐ Edit"}
+            action={() => <button onClick={() => handleDeleteReview(index)}>Delete</button>}
+
             />
-            
+            Overall Rating: {renderStarIcons(review.overallRating)}
           </Col>
         ))}
       </ul>
