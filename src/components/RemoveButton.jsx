@@ -6,7 +6,7 @@ const RemoveButton = ({ showId, removeFromWatchlist }) => {
   };
 
   return (
-    <button onClick={handleRemove}>Remove</button>
+    <button onClick={handleRemove} className='remove-btn'>✘ Remove</button>
   );
 };
 

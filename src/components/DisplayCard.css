@@ -10,7 +10,8 @@
 .single-card {
   position: relative;
   transition: 0.6s ease-out;
-  box-shadow: 0 10px 10px rgba (0, 0, 0, 0.5);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  border: none !important;
 }
 
 .single-card:hover {
@@ -51,29 +52,20 @@
   align-items: flex-end;
 }
 
-/* Card image styling */
-
- .card-img-container {
-  height: 400px !important;
-  width: 100% !important;
-  overflow: hidden !important;  /* Hide any overflow to maintain aspect ratio   */
-
-} 
-
- .card-img {
-  width: 50%;   /* Ensure the image takes up the full width of its container    */
-  height: 450px; /* Allow the height to adjust proportionally based on the width */
-} 
+.card-img {
+  width: 100% !important; /* Set the image width to 100% of its container */
+  height: 100% !important; /* Set the image height to 100% of its container */
+}
 
 /* Need to move title further down and sort out why buttons are not aligned */
 .card-title {
-font-family: "Anton";
-font-size: 35px !important;
-letter-spacing: 1px;
-margin: 0;
-text-align: center;
-width: 100% !important;
-display: none !important;
+  font-family: "Anton";
+  font-size: 35px !important;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+  width: 100% !important;
+  /* display: none !important; */
 }
 
 .result-btns {
