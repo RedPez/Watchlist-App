@@ -5,20 +5,25 @@ import RatingStarInput from "./RatingStarInput";
 import API from "../utils/API";
 import tvImage from "../assets/images/tv-show.png";
 
+const handleStorage = () => {};
 
 const ReviewModalWithButton = (props) => {
-
   const [show, setShow] = useState(false);
   const [showDetails, setShowDetails] = useState([]);
-  const [characterRating, setCharacterRating] = useState(0);
-  const [plotRating, setPlotRating] = useState(0);
-  const [writingRating, setWritingRating] = useState(0);
-  const [paceRating, setPaceRating] = useState(0);
-  const [overallRating, setOverallRating] = useState(0);
+  const [characterRating, setCharacterRating] = useState(
+    props.review?.characterRating ?? 0
+  );
+  const [plotRating, setPlotRating] = useState(props.review?.plotRating ?? 0);
+  const [writingRating, setWritingRating] = useState(
+    props.review?.writingRating ?? 0
+  );
+  const [paceRating, setPaceRating] = useState(props.review?.paceRating ?? 0);
+  const [overallRating, setOverallRating] = useState(
+    props.review?.overallRating ?? 0
+  );
   console.log(showDetails);
   const handleClose = () => setShow(false);
   const handleShow = async () => {
-
     try {
       const response = await API.getShowDetails(props.show.name);
       setShowDetails(response.data);
@@ -26,11 +31,11 @@ const ReviewModalWithButton = (props) => {
       console.log(error);
     }
 
-    setShow(true)};
+    setShow(true);
+  };
 
-  const [reviewText, setReviewText] = useState(""); // State for review text
+  const [reviewText, setReviewText] = useState(props.review?.reviewText ?? ""); // State for review text
 
-  
   const handleSaveChanges = () => {
     // Collect all data
     const reviewData = {
@@ -42,22 +47,37 @@ const ReviewModalWithButton = (props) => {
       paceRating,
       reviewText,
       overallRating,
+      id: props.show.id,
     };
 
+    console.log(props);
+
     // Retrieve existing reviews from local storage or initialize an empty array
-    const existingReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    let storedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    if (Array.isArray(storedReviews)) {
+      let index = storedReviews.findIndex((el) => el.id == reviewData.id);
+
+      if (index !== -1) {
+        storedReviews.splice(index, 1, reviewData);
+      } else storedReviews.push(reviewData);
+    }
+
+    localStorage.setItem("reviews", JSON.stringify(storedReviews));
+
+    // // // Sort reviews by overall rating in descending order
+    //  storedReviews.sort((a, b) => b.overallRating - a.overallRating);
+
+    // // Update local storage with the updated reviews array
 
     // Add new review data to the array
-    existingReviews.push(reviewData);
 
-    // Sort reviews by overall rating in descending order
-    existingReviews.sort((a, b) => b.overallRating - a.overallRating);
+    // existingReviews = existingReviews.map((el, id) => ({...el, id}))
 
-    // Update local storage with the updated reviews array
-    localStorage.setItem("reviews", JSON.stringify(existingReviews));
+    handleClose();
 
     // Close the modal
-    handleClose();
   };
 
   return (
@@ -136,28 +156,27 @@ const ReviewModalWithButton = (props) => {
                 <RatingStarInput value={paceRating} onChange={setPaceRating} />{" "}
               </div>
             </div>
-          
 
-          <div className="review-txt">
-            Write your review here:
-            <textarea
-              rows="4"
-              cols="50"
-              name="comment"
-              form="userform"
-              value={reviewText}
-              onChange={(e) => setReviewText(e.target.value)}
-              style={{ border: "2px solid black" }}
-            ></textarea>
-          </div>
+            <div className="review-txt">
+              Write your review here:
+              <textarea
+                rows="4"
+                cols="50"
+                name="comment"
+                form="userform"
+                value={reviewText}
+                onChange={(e) => setReviewText(e.target.value)}
+                style={{ border: "2px solid black" }}
+              ></textarea>
+            </div>
 
-          <div className="overall-rating">
-            Overall rating:{" "}
-            <RatingStarInput
-              value={overallRating}
-              onChange={setOverallRating}
-            />
-          </div>
+            <div className="overall-rating">
+              Overall rating:{" "}
+              <RatingStarInput
+                value={overallRating}
+                onChange={setOverallRating}
+              />
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer className="modal-footer">

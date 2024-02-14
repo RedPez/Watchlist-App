@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from 'react-icons/fa';
 import FilterShows from './FilterShows'; 
+import DisplayCard from "./DisplayCard";
+import { Col } from "react-bootstrap";
 
 
 const ReviewComponent = () => {
@@ -45,24 +47,18 @@ const ReviewComponent = () => {
       <h2>Reviews</h2>
       <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />
 
-      <ul>
+      <ul className="row flex-nowrap overflow-auto">
         {reviews.map((review, index) => (
-          <li key={index}>
-            <h3>{review.name}</h3>
-            {review.image && <img src={review.image} alt={review.title} />}
-            <p>Characters Rating: {renderStarIcons(review.characterRating)}</p>
-            <p>Plot Rating: {renderStarIcons(review.plotRating)}</p>
-            <p>Writing Rating: {renderStarIcons(review.writingRating)}</p>
-            <p>Pace Rating: {renderStarIcons(review.paceRating)}</p>
-            <p>{review.reviewText}</p>
-           
-            <div>
-              Overall Rating: {renderStarIcons(review.overallRating)}
-            </div>
-          
-            <button onClick={() => handleEditReview(index)}>Edit</button>
-            <button onClick={() => handleDeleteReview(index)}>Delete</button>
-          </li>
+          <Col as="li" key={index} xs={12} md={6} lg={4} xl={3} className="mb-3">
+            <DisplayCard 
+            name={review.name}
+            image={{original: review.image}}
+            review={review}
+            id={review.id}
+            action={() => <button onClick={() => handleDeleteReview(index)}>Delete</button>}
+            />
+            
+          </Col>
         ))}
       </ul>
     </div>
