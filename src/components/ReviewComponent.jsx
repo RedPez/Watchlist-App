@@ -45,26 +45,15 @@ const ReviewComponent = () => {
 
       <ul className="row flex-nowrap overflow-auto">
         {reviews.map((review, index) => (
-          <Col
-            as="li"
-            key={index}
-            xs={12}
-            md={6}
-            lg={4}
-            xl={3}
-            className="mb-3"
-          >
-            <DisplayCard
-              name={review.name}
-              image={{ original: review.image }}
-              review={review}
-              id={review.id}
-              buttonName={"✐ Edit"}
-              action={() => (
-                <button onClick={() => handleDeleteReview(index)}>
-                  Delete
-                </button>
-              )}
+
+          <Col as="li" key={index} xs={12} md={6} lg={4} xl={3} className="mb-3">
+            <DisplayCard 
+            name={review.name}
+            image={{original: review.image}}
+            review={review}
+            id={review.id}
+            buttonName= {"✐ Edit"}
+            action={() => <button onClick={() => handleDeleteReview(index)}>Delete</button>}
             />
             Overall Rating: {renderStarIcons(review.overallRating)}
           </Col>
