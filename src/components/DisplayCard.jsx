@@ -1,8 +1,9 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
+
 import noImage from "../assets/images/no_image_avail.png";
 
 const DisplayCard = (props) => {
@@ -26,9 +27,12 @@ const DisplayCard = (props) => {
                 <ReviewModalWithButton show={props} review={props.review} buttonName= {props.buttonName} />
                 
                 </div>
+
             </Card.ImgOverlay>
           </Card>
-
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
