@@ -229,7 +229,7 @@ textarea {
 
 /* Social media icons in footer section */
 .fa {
-  padding: 0.5%;
+  /* padding: 0.5%; */
   text-align: center;
   text-decoration: none;
   color: white !important;
