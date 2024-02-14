@@ -21,7 +21,7 @@ const Hero = () => {
         loop
         className="hero-vid"
         onClick={handleClick}
-        src="../src/assets/images/hero-video.mp4"
+        src="../src/assets/hero-video.mp4"
         title="hero-video"
       ></video>
     </div>

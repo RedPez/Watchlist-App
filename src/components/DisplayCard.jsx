@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
-import tvImage from "../assets/images/site-logo.png";
+import tvImage from "../assets/site-logo.png";
 
 const DisplayCard = (props) => {
   return (
