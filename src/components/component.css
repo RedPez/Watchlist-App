@@ -4,7 +4,9 @@
 
 h2 {
   font-family: "Francois One";
-  margin-top: 15px;
+  margin-top: 30px !important;
+  margin-left: 10px !important;
+  margin-bottom: 20px !important;
 }
 
 h3,
@@ -110,6 +112,7 @@ h3,
   font-size: 16px;
   color: #cb6ce6;
 }
+
 .hero-vid {
   width: 55%;
   padding-top: 25px;
@@ -178,13 +181,18 @@ textarea {
   border-bottom: none !important;
 }
 
-.modal-footer {
+/* sort/filter section */
+
+.filter-txt {
+  font-family: "Comic Neue";
+  font-size: 18px;
+  padding-left: 10px;
+  margin-bottom: 25px;
 }
-/* remove from watchlist button */
 
 /* review tv show and add to watchlist buttons */
 .review-btn,
-.add-btn {
+.add-btn, .remove-btn {
   background-color: transparent !important;
   color: white !important;
   font-family: "Francois One" !important;
@@ -193,7 +201,7 @@ textarea {
 }
 
 .review-btn:hover,
-.add-btn:hover {
+.add-btn:hover, .remove-btn:hover {
   opacity: 0.6;
 }
 

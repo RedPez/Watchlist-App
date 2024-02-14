@@ -23,16 +23,16 @@ const FilterShows = ({ shows, onFilter }) => {
 
   return (
     <div>
-      <label htmlFor="genre">Filter shows by:</label>
-      <select id="genre" value={selectedGenre} onChange={handleGenreChange}>
-        <option value="">All Genres</option>
+      <label htmlFor="genre" className='filter-txt'>Filter shows by:</label>
+      <select id="genre" className='filter-txt' value={selectedGenre} onChange={handleGenreChange}>
+        <option value="" className='filter-txt'>All Genres</option>
         {genres.map(genre => (
           <option key={genre} value={genre}>{genre}</option>
         ))}
       </select>
-      <label htmlFor="date">Date Released:</label>
-      <select id="date" value={selectedDate} onChange={handleDateChange}>
-        <option value="">All Dates</option>
+      <label htmlFor="date" className='filter-txt'>Date Released:</label>
+      <select id="date" value={selectedDate} onChange={handleDateChange} className='filter-txt'>
+        <option value="" className='filter-txt'>All Dates</option>
         {/* Add options for dates here */}
       </select>
     </div>
