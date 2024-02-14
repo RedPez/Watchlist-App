@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const FilterShows = ({ shows, onFilter }) => {
   const [genres, setGenres] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState('');
-  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState("");
+  const [selectedDate, setSelectedDate] = useState("");
 
   useEffect(() => {
-    // here we extract all the unique genres from the shows
-    const uniqueGenres = Array.from(new Set(shows.map(show => show.Genre).flat()));
+    // Extract all unique genres from the shows
+    const uniqueGenres = Array.from(
+      new Set(shows.map((show) => show.Genre).flat())
+    );
     setGenres(uniqueGenres);
   }, [shows]);
 
@@ -23,16 +25,36 @@ const FilterShows = ({ shows, onFilter }) => {
 
   return (
     <div>
-      <label htmlFor="genre">Filter shows by:</label>
-      <select id="genre" value={selectedGenre} onChange={handleGenreChange}>
-        <option value="">All Genres</option>
-        {genres.map(genre => (
-          <option key={genre} value={genre}>{genre}</option>
+      <label htmlFor="genre" className="filter-txt">
+        Filter shows by:
+      </label>
+      <select
+        id="genre"
+        className="filter-txt"
+        value={selectedGenre}
+        onChange={handleGenreChange}
+      >
+        <option value="" className="filter-txt">
+          All Genres
+        </option>
+        {genres.map((genre) => (
+          <option key={genre} value={genre}>
+            {genre}
+          </option>
         ))}
       </select>
-      <label htmlFor="date">Date Released:</label>
-      <select id="date" value={selectedDate} onChange={handleDateChange}>
-        <option value="">All Dates</option>
+      <label htmlFor="date" className="filter-txt">
+        Date Released:
+      </label>
+      <select
+        id="date"
+        value={selectedDate}
+        onChange={handleDateChange}
+        className="filter-txt"
+      >
+        <option value="" className="filter-txt">
+          All Dates
+        </option>
         {/* Add options for dates here */}
       </select>
     </div>

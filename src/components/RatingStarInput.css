@@ -1,7 +1,7 @@
-input[type=radio]{
-     display: none;
+input[type="radio"] {
+  display: none;
 }
 
 .rating-value {
-     visibility: hidden;
+  visibility: hidden;
 }

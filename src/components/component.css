@@ -4,7 +4,9 @@
 
 h2 {
   font-family: "Francois One";
-  margin-top: 15px;
+  margin-top: 30px !important;
+  margin-left: 10px !important;
+  margin-bottom: 20px !important;
 }
 
 h3,
@@ -61,12 +63,12 @@ h3,
 }
 
 .heading-bg {
-    position: relative;
-    padding: 10px 25px 10px 30px;
+  position: relative;
+  padding: 10px 25px 10px 30px;
 }
 
 .heading-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -77,13 +79,13 @@ h3,
 }
 
 .hero-heading {
-    margin-top: 20px !important;
-    font-family: "Francois One";
-    text-align: center;
-    -webkit-text-stroke: 1px #ffffff;
-    font-size: 50px;
-    z-index: 4;
-    color: white;
+  margin-top: 20px !important;
+  font-family: "Francois One";
+  text-align: center;
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 50px;
+  z-index: 4;
+  color: white;
 }
 
 .hero-txt {
@@ -110,6 +112,7 @@ h3,
   font-size: 16px;
   color: #cb6ce6;
 }
+
 .hero-vid {
   width: 55%;
   padding-top: 25px;
@@ -155,9 +158,9 @@ h3,
 }
 
 .star-grid {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .review-txt {
@@ -178,13 +181,19 @@ textarea {
   border-bottom: none !important;
 }
 
-.modal-footer {
+/* sort/filter section */
+
+.filter-txt {
+  font-family: "Comic Neue";
+  font-size: 18px;
+  padding-left: 10px;
+  margin-bottom: 25px;
 }
-/* remove from watchlist button */
 
 /* review tv show and add to watchlist buttons */
 .review-btn,
-.add-btn {
+.add-btn,
+.remove-btn {
   background-color: transparent !important;
   color: white !important;
   font-family: "Francois One" !important;
@@ -193,7 +202,8 @@ textarea {
 }
 
 .review-btn:hover,
-.add-btn:hover {
+.add-btn:hover,
+.remove-btn:hover {
   opacity: 0.6;
 }
 

@@ -3,9 +3,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
-import Homepage from "../pages/Homepage";
-import MyReviews from "../pages/MyReviews";
-import WatchList from "../pages/WatchList";
 
 function MyNavbar() {
   return (
@@ -13,7 +10,7 @@ function MyNavbar() {
       <Navbar className="custom-navbar">
         <Container>
           <Navbar.Brand href="/">
-            <img alt="" src="/src/assets/site-logo-white.png" width="90" />{" "}
+            <img alt="" src="../assets/site-logo-white.png" width="90" />{" "}
           </Navbar.Brand>
 
           <Nav className="nav-links-group">

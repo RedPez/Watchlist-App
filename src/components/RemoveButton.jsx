@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const RemoveButton = ({ showId, removeFromWatchlist }) => {
   const handleRemove = () => {
@@ -6,7 +6,9 @@ const RemoveButton = ({ showId, removeFromWatchlist }) => {
   };
 
   return (
-    <button onClick={handleRemove}>Remove</button>
+    <button onClick={handleRemove} className="remove-btn">
+      ✘ Remove
+    </button>
   );
 };
 

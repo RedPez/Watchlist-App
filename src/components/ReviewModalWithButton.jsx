@@ -3,11 +3,11 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import RatingStarInput from "./RatingStarInput";
 import API from "../utils/API";
-import tvImage from "../assets/tv-show.png";
 
-
+//import noImage from "../assets/images/no_image_avail";
 
 const ReviewModalWithButton = (props) => {
+  const noImage = "../assets/images/no_image_avail.png";
   const [show, setShow] = useState(false);
   const [showDetails, setShowDetails] = useState([]);
   const [characterRating, setCharacterRating] = useState(
@@ -40,7 +40,7 @@ const ReviewModalWithButton = (props) => {
     // Collect all data
     const reviewData = {
       name: props.show.name,
-      image: props.show.image ? props.show.image.original : tvImage, // Pass image from parent component
+      image: props.show.image ? props.show.image.original : noImage, // Pass image from parent component
       characterRating,
       plotRating,
       writingRating,
@@ -85,7 +85,7 @@ const ReviewModalWithButton = (props) => {
   return (
     <>
       <Button className="review-btn" onClick={handleShow}>
-        ✐ Review
+        {props.buttonName}
       </Button>
 
       <Modal show={show} onHide={handleClose} size="md">
@@ -98,7 +98,7 @@ const ReviewModalWithButton = (props) => {
             <div className="modal-img">
               {" "}
               <img
-                src={props.show.image ? props.show.image.original : tvImage}
+                src={props.show.image ? props.show.image.original : noImage}
                 alt={props.show.name}
               />
             </div>
