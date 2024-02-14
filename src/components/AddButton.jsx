@@ -1,15 +1,19 @@
 import React from "react";
+import noImage from "../assets/images/no_image_avail.png";
 
 const AddButton = ({ show }) => {
+
   const handleAddToWatchlist = () => {
     const watchlistData = {
       id: show.id,
       name: show.name,
-      image: {medium: show.image.medium, original: show.image.original},
+      image: {original: show.image?.original},
     };
 
     saveToWatchlist(watchlistData);
   };
+
+  console.log(handleAddToWatchlist)
 
   const saveToWatchlist = (data) => {
     const existingWatchlist =
