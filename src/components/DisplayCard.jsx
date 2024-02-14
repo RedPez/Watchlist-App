@@ -6,9 +6,10 @@ import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
 
-import noImage from "../assets/images/no_image_avail.png";
+//import noImage from "../assets/images/no_image_avail.png";
 
 const DisplayCard = (props) => {
+  const noImage = "../assets/images/no_image_avail.png";
   return (
     <Container>
       <Row>
