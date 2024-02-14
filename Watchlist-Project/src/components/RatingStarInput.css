@@ -2,3 +2,6 @@ input[type=radio]{
      display: none;
 }
 
+.rating-value {
+     visibility: hidden;
+}
