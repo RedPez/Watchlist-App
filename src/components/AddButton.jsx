@@ -1,30 +1,28 @@
 import React from "react";
-import noImage from "../assets/images/no_image_avail.png";
 
 const AddButton = ({ show }) => {
-
   const handleAddToWatchlist = () => {
     const watchlistData = {
       id: show.id,
       name: show.name,
-      image: {original: show.image?.original},
+      image: { original: show.image?.original },
     };
 
     saveToWatchlist(watchlistData);
   };
 
-  console.log(handleAddToWatchlist)
+  console.log(handleAddToWatchlist);
 
   const saveToWatchlist = (data) => {
     const existingWatchlist =
       JSON.parse(localStorage.getItem("watchlist")) || [];
-  
+
     // We check if the show already exists in the watchlist using the some method, it basicaly checks whether at least one element in an array satisfies a specific condition
-    const showExists = existingWatchlist.some(item => item.id === data.id);
-  
+    const showExists = existingWatchlist.some((item) => item.id === data.id);
+
     if (!showExists) {
       existingWatchlist.push(data);
-  
+
       // Updates localStorage with the updated watchlist only if the show id is not in the localStorage
       localStorage.setItem("watchlist", JSON.stringify(existingWatchlist));
       console.log("Added to watchlist:", data);
@@ -32,11 +30,13 @@ const AddButton = ({ show }) => {
       console.log("Show already exists in watchlist:", data);
     }
   };
-  
 
   return (
     <div>
-      <button className="add-btn" onClick={handleAddToWatchlist}>	&#65291; Add to Watchlist</button>
+      <button className="add-btn" onClick={handleAddToWatchlist}>
+        {" "}
+        &#65291; Add to Watchlist
+      </button>
     </div>
   );
 };
