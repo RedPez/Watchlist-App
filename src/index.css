@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url(./assets/images/10.png);
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.footer-section {
+  padding: 1%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: "Comic Neue";
+  margin-top: auto; /* Push the footer to the bottom */
+}

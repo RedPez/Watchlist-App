@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Francois+One&family=Lilita+One&display=swap");
+
+.custom-navbar {
+  background: rgb(0, 0, 0);
+}
+
+.home-link,
+.reviews-link,
+.watchlist-link {
+  font-family: "Francois One";
+  font-size: 20px !important;
+  color: rgb(255, 255, 255) !important;
+  margin-left: 10px !important;
+  padding-left: 35px !important;
+}
+
+.home-link:hover,
+.reviews-link:hover,
+.watchlist-link:hover {
+  font-size: 22px !important;
+}
+
+.home-link:hover {
+  color: #cb6ce6 !important;
+}
+
+.reviews-link:hover {
+  color: #00a99d !important;
+}
+
+.watchlist-link:hover {
+  color: #f7d000 !important;
+}

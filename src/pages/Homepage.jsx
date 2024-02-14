@@ -55,8 +55,6 @@ const handleSearchSubmit = (event) => {
         results={searchData.results}
         action={({show}) => <AddButton show={show} />}
        />
-
-        <Footer/>
     </div>
   );
 };

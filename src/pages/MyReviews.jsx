@@ -9,7 +9,6 @@ const MyReviews = () => {
     <Navbar/> 
     <h2>My Reviews</h2>
     <ReviewComponent/> 
-    <Footer/>
     </> 
   )
 }
