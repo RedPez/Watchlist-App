@@ -5,7 +5,7 @@ import RatingStarInput from "./RatingStarInput";
 import API from "../utils/API";
 import tvImage from "../assets/tv-show.png";
 
-const handleStorage = () => {};
+
 
 const ReviewModalWithButton = (props) => {
   const [show, setShow] = useState(false);
@@ -48,6 +48,8 @@ const ReviewModalWithButton = (props) => {
       reviewText,
       overallRating,
       id: props.show.id,
+      genre: showDetails.Genre || "Data not available",
+      dateReleased: showDetails.Released || "Data not available"
     };
 
     console.log(props);

@@ -6,7 +6,7 @@ const FilterShows = ({ shows, onFilter }) => {
   const [selectedDate, setSelectedDate] = useState('');
 
   useEffect(() => {
-    // Extract all unique genres from the shows
+    // here we extract all the unique genres from the shows
     const uniqueGenres = Array.from(new Set(shows.map(show => show.Genre).flat()));
     setGenres(uniqueGenres);
   }, [shows]);
