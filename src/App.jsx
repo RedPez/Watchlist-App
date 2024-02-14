@@ -1,30 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Homepage from './pages/Homepage'
-import MyReviews from './pages/MyReviews'
-import WatchList from './pages/WatchList';
-
-
+import Homepage from "./pages/Homepage";
+import MyReviews from "./pages/MyReviews";
+import WatchList from "./pages/WatchList";
 
 function App() {
-
   return (
     <>
-    
-
       <Router>
         <Routes>
-          <Route path='/' element={<Homepage/>}/> 
-          <Route path='MyReviews' element={<MyReviews/>}/> 
-          <Route path='Watchlist' element={<WatchList />}/> 
-          
-      </Routes> 
+          <Route path="/" element={<Homepage />} />
+          <Route path="/MyReviews" element={<MyReviews />} />
+          <Route path="/Watchlist" element={<WatchList />} />
+        </Routes>
       </Router>
     </>
-  )
+  );
 }
 
-export default App
-
-
+export default App;
