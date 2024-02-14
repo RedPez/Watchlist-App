@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Searchbar from "../components/Searchbar";
-import DisplayCard from "../components/DisplayCard";
+import DisplayCards from "../components/DisplayCards";
 import API from "../utils/API";
 import ReviewModalWithButton from "../components/ReviewModalWithButton";
 import AddButton from "../components/AddButton";
@@ -50,7 +50,7 @@ const handleSearchSubmit = (event) => {
         handleSearchSubmit={handleSearchSubmit}
         handleInputChange={handleInputChange}
         />
-        <DisplayCard
+        <DisplayCards
         results={searchData.results}
         action={({show}) => <AddButton show={show} />}
        />
