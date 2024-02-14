@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
@@ -37,3 +39,4 @@ const DisplayCard = (props) => {
 };
 
 export default DisplayCard;
+>>>>>>> a20feedd16e57cb37fe9479227080ba22c799d67
