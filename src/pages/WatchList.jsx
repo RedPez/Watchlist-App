@@ -27,7 +27,6 @@ const WatchList = () => {
     watchlist={watchlist}
     removeFromWatchlist={removeFromWatchlist}
     />
-    <Footer />
     </> 
   )
 }
