@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-image: url(./assets/images/10.png);
+  background-image: url(./assets/10.png);
   background-repeat: no-repeat;
   background-color: black;
   background-size: cover;
@@ -20,5 +20,5 @@ body {
   background-color: black;
   color: white;
   font-family: "Comic Neue";
-  margin-top: auto; 
+  margin-top: auto;
 }

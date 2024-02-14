@@ -13,17 +13,17 @@ function MyNavbar() {
       <Navbar className="custom-navbar">
         <Container>
           <Navbar.Brand href="/">
-            <img alt="" src="../src/assets/images/site-logo-white.png" width="90" />{" "}
+            <img alt="" src="/src/assets/site-logo-white.png" width="90" />{" "}
           </Navbar.Brand>
 
           <Nav className="nav-links-group">
             <Nav.Link className="home-link" href="/">
               Home
             </Nav.Link>
-            <Nav.Link className="reviews-link" href="MyReviews">
+            <Nav.Link className="reviews-link" href="/MyReviews">
               My Reviews
             </Nav.Link>
-            <Nav.Link className="watchlist-link" href="Watchlist">
+            <Nav.Link className="watchlist-link" href="/Watchlist">
               Watchlist
             </Nav.Link>
           </Nav>
