@@ -44,7 +44,8 @@ const ReviewComponent = () => {
   return (
     <div>
       
-      <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />
+      {reviews.length > 0 && <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />}
+
 
       <ul className="row flex-nowrap overflow-auto">
         {reviews.map((review, index) => (
