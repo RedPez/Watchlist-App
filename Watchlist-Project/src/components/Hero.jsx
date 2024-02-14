@@ -3,10 +3,10 @@ import React from "react";
 const Hero = () => {
   return (
     <div>
+      <div className="hero-heading"> <span className="heading-bg">WELCOME TO WATCHLIST</span></div>
       <div className="hero-txt">
         {" "}
-        Welcome to <span className="brand"> Watchlist</span>, where your reviews
-        are as important as the critics. Loved a tv show you watched recently?
+        Where your reviews are as important as the critics. Loved a tv show you watched recently?
         Or was it enough to put you to sleep -{" "}
         <span className="sleep">Zzzz</span>. Either way, share it here. <br />{" "}
         <span className="cta-txt">

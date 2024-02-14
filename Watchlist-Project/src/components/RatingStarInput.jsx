@@ -20,8 +20,8 @@ const RatingStarInput = ({value, onChange}) => {
               />
                 <FaStar 
                 className="cursor-pointer" 
-                size={50} 
-                color={currentRating <= (hover || value) ? "ffc107" : "#e4e5e9"}
+                size={35} 
+                color={currentRating <= (hover || value) ? "#000" : "#e4e5e9"}
                 onMouseEnter={() => setHover(currentRating)}
                 onMouseLeave={() => setHover(null)}
                 />
@@ -29,7 +29,7 @@ const RatingStarInput = ({value, onChange}) => {
 
           )
        })}
-       <div>{value}</div>
+       <div className="rating-value">{value}</div>
        
       </div>
     </div>
