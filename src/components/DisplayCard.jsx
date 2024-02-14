@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 import React from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
@@ -32,11 +30,8 @@ const DisplayCard = (props) => {
 
             </Card.ImgOverlay>
           </Card>
-        </Col>
-      </Row>
-    </Container>
+       
   );
 };
 
 export default DisplayCard;
->>>>>>> a20feedd16e57cb37fe9479227080ba22c799d67
