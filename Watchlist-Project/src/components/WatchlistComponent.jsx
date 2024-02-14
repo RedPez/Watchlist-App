@@ -1,22 +1,17 @@
 // WatchListComponent.jsx
 import React from 'react';
-import ReviewModalWithButton from './ReviewModalWithButton';
 import RemoveButton from './RemoveButton';
+import DisplayCard from './DisplayCard';
 
 const WatchList = (props) => {
+  console.log(props)
   return (
     <div>
       <div>
-        {props.watchlist.map(item => (
-          <div key={item.id}>
-            <h3>{item.title}</h3>
-            {item.poster && <img src={item.poster} alt={item.title} />}
-            <div>
-              <ReviewModalWithButton show={item} />
-              <RemoveButton showId={item.id} removeFromWatchlist={props.removeFromWatchlist} />
-            </div>
-          </div>
-        ))}
+      <DisplayCard
+        results={props.watchlist}
+        action={ ({show}) =>  <RemoveButton showId={show.id} removeFromWatchlist={props.removeFromWatchlist} />}
+       ></DisplayCard>
       </div>
     </div>
   );
