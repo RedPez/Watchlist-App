@@ -1,4 +1,4 @@
-# The Watchlist Ap
+# The Watchlist App
 
 ## Table of Contents
 
@@ -49,6 +49,7 @@ This project was created with:
 - TV Maze API
 - API Ninjas
 - Canva
+- Google fonts
 
 ### User Story
 
