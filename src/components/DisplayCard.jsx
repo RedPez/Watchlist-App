@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container, Col, Row } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
@@ -33,7 +33,9 @@ const DisplayCard = (props) => {
               </div>
             </Card.ImgOverlay>
           </Card>
-       
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
