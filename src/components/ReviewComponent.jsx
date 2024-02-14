@@ -3,14 +3,23 @@ import { FaStar } from "react-icons/fa";
 import FilterShows from "./FilterShows";
 import DisplayCard from "./DisplayCard";
 import { Col } from "react-bootstrap";
+import SearchComponent from './SearchComponent';
 
 const ReviewComponent = () => {
   const [reviews, setReviews] = useState([]);
+  // const [genres, setGenres] = useState([]);
+  // const [dates, setDates] = useState([]);
 
   useEffect(() => {
     // Here we retrieve reviews from local storage
     const storedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
     setReviews(storedReviews);
+      // Extract all unique genres and dates from the reviews
+      // const uniqueGenres = Array.from(new Set(storedReviews.map(review => review.genre)));
+      // const uniqueDates = Array.from(new Set(storedReviews.map(review => review.dateReleased)));
+      
+      // setGenres(uniqueGenres);
+      // setDates(uniqueDates);
   }, []);
 
   const handleDeleteReview = (index) => {
@@ -36,12 +45,9 @@ const ReviewComponent = () => {
 
   return (
     <div>
-      {reviews.length > 0 && (
-        <FilterShows
-          shows={reviews}
-          onFilter={(genre, date) => console.log(genre, date)}
-        />
-      )}
+        <SearchComponent reviews={reviews} />
+      {reviews.length > 0 && <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />}
+
 
       <ul className="row flex-nowrap overflow-auto">
         {reviews.map((review, index) => (
