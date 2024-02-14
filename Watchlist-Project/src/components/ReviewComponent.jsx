@@ -48,8 +48,8 @@ const ReviewComponent = () => {
       <ul>
         {reviews.map((review, index) => (
           <li key={index}>
-            <h3>{review.title}</h3>
-            {review.poster && <img src={review.poster} alt={review.title} />}
+            <h3>{review.name}</h3>
+            {review.image && <img src={review.image} alt={review.title} />}
             <p>Characters Rating: {renderStarIcons(review.characterRating)}</p>
             <p>Plot Rating: {renderStarIcons(review.plotRating)}</p>
             <p>Writing Rating: {renderStarIcons(review.writingRating)}</p>

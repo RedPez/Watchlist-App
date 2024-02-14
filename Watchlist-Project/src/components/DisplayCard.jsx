@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
-import AddButton from "./AddButton";
 import "./DisplayCard.css";
 import "./component.css";
 import tvImage from "../assets/images/site-logo.png";

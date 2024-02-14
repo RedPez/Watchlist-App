@@ -34,8 +34,8 @@ const ReviewModalWithButton = (props) => {
   const handleSaveChanges = () => {
     // Collect all data
     const reviewData = {
-      title: props.title,
-      image: props.image, // Pass image from parent component
+      name: props.show.name,
+      image: props.show.image ? props.show.image.original : tvImage, // Pass image from parent component
       characterRating,
       plotRating,
       writingRating,
