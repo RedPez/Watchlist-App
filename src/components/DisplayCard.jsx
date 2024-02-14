@@ -4,10 +4,10 @@ import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
 
-//import noImage from "../assets/images/no_image_avail.png";
+import noImage from "../assets/images/no_image_avail.jpg";
 
 const DisplayCard = (props) => {
-  const noImage = "../assets/images/no_image_avail.png";
+  //const noImage = "../assets/images/no_image_avail.jpg";
   return (
     <Container>
       <Row>

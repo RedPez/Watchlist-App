@@ -4,10 +4,10 @@ import Modal from "react-bootstrap/Modal";
 import RatingStarInput from "./RatingStarInput";
 import API from "../utils/API";
 
-//import noImage from "../assets/images/no_image_avail";
+import noImage from "../assets/images/no_image_avail.jpg";
 
 const ReviewModalWithButton = (props) => {
-  const noImage = "../assets/images/no_image_avail.png";
+  //const noImage = "../assets/images/no_image_avail.jpg";
   const [show, setShow] = useState(false);
   const [showDetails, setShowDetails] = useState([]);
   const [characterRating, setCharacterRating] = useState(
