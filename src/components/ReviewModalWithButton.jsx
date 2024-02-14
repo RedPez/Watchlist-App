@@ -3,6 +3,10 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import RatingStarInput from "./RatingStarInput";
 import API from "../utils/API";
+<<<<<<< HEAD
+=======
+
+>>>>>>> a20feedd16e57cb37fe9479227080ba22c799d67
 import noImage from "../assets/images/no_image_avail.png";
 
 
