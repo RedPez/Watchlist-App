@@ -20,10 +20,10 @@ function MyNavbar() {
             <Nav.Link className="home-link" href="/">
               Home
             </Nav.Link>
-            <Nav.Link className="reviews-link" href="MyReviews">
+            <Nav.Link className="reviews-link" href="/MyReviews">
               My Reviews
             </Nav.Link>
-            <Nav.Link className="watchlist-link" href="Watchlist">
+            <Nav.Link className="watchlist-link" href="/Watchlist">
               Watchlist
             </Nav.Link>
           </Nav>
