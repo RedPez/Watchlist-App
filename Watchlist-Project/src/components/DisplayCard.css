@@ -53,29 +53,17 @@
 
 /* Card image styling */
 
-.card-img-container {
+ .card-img-container {
   height: 400px !important;
-  width: 300px !important;
-  overflow: hidden !important; /* Hide any overflow to maintain aspect ratio */
-}
+  width: 100% !important;
+  overflow: hidden !important;  /* Hide any overflow to maintain aspect ratio   */
 
-.card-img {
-  width: 100%; /* Ensure the image takes up the full width of its container */
-  height: auto; /* Allow the height to adjust proportionally based on the width */
-}
+} 
 
-/* Card image styling */
-
-.card-img-container {
-  height: 400px !important;
-  width: 300px !important;
-  overflow: hidden !important; /* Hide any overflow to maintain aspect ratio */
-}
-
-.card-img {
-  width: 100%; /* Ensure the image takes up the full width of its container */
-  height: auto; /* Allow the height to adjust proportionally based on the width */
-}
+ .card-img {
+  width: 50%;   /* Ensure the image takes up the full width of its container    */
+  height: 450px; /* Allow the height to adjust proportionally based on the width */
+} 
 
 /* Need to move title further down and sort out why buttons are not aligned */
 .card-title {
