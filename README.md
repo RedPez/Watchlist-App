@@ -1,4 +1,4 @@
-# The Watchlist App
+# The Watchlist Ap
 
 ## Table of Contents
 
