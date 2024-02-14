@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import WatchlistComponent from "../components/WatchlistComponent"
-import Footer from '../components/Footer'
 
 
 const WatchList = () => {
