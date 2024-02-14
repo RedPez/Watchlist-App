@@ -3,12 +3,13 @@
 /* page titles */
 
 h2 {
-font-family: "Francois One";
-margin-top: 15px;
+  font-family: "Francois One";
+  margin-top: 15px;
 }
 
-h3, .rating-cont {
-font-family: "Francois One";
+h3,
+.rating-cont {
+  font-family: "Francois One";
 }
 
 .modal-title {
@@ -27,8 +28,8 @@ font-family: "Francois One";
 
 #search {
   border: solid 3px black;
-  height: 60px;
-  width: 400px;
+  height: 2em;
+  width: 15em;
   padding-left: 10px;
   font-family: "Comic Neue";
   font-size: 22px;
@@ -41,15 +42,19 @@ font-family: "Francois One";
   border: white 3px solid !important;
   border-radius: 0 !important;
   font-family: "Francois One" !important;
-  font-size: 25px !important;
+  font-size: 20px !important;
   font-weight: bolder !important;
   margin-left: 10px;
   letter-spacing: 1.25px;
+  height: 2.2em !important;
 }
 
 /* Hero */
+.hero-background {
+}
+
 .hero-txt {
-  font-family: 'Comic Neue';
+  font-family: "Comic Neue";
   font-size: 18px;
   text-align: center;
   background-color: white;
@@ -61,14 +66,16 @@ font-family: "Francois One";
   padding: 10px;
 }
 
-.brand, .sleep, .cta-txt {
+.brand,
+.sleep,
+.cta-txt {
   font-weight: bolder !important;
 }
 
 .cta-txt {
   padding-top: 5px;
-  font-size: 19px;
-  color: #CB6CE6;
+  font-size: 16px;
+  color: #cb6ce6;
 }
 .hero-vid {
   width: 55%;
@@ -79,16 +86,16 @@ font-family: "Francois One";
 
 /* modal */
 .modal-close-btn {
-background-color: black !important;
-border: none !important;
-border-radius: 1px!important;
-font-family: "Francois One" !important;
+  background-color: black !important;
+  border: none !important;
+  border-radius: 1px !important;
+  font-family: "Francois One" !important;
 }
 
 .modal-save-btn {
-  background-color: #00A99D !important;
+  background-color: #00a99d !important;
   border: none !important;
-  border-radius: 1px!important;
+  border-radius: 1px !important;
   font-family: "Francois One" !important;
 }
 
@@ -121,7 +128,7 @@ font-family: "Francois One" !important;
 }
 
 .review-txt {
-  margin-top : 15px;
+  margin-top: 15px;
 }
 
 textarea {
@@ -135,16 +142,16 @@ textarea {
 }
 
 .modal-header {
-border-bottom: none !important;
+  border-bottom: none !important;
 }
 
 .modal-footer {
-
 }
 /* remove from watchlist button */
 
 /* review tv show and add to watchlist buttons */
-.review-btn, .add-btn {
+.review-btn,
+.add-btn {
   background-color: transparent !important;
   color: white !important;
   font-family: "Francois One" !important;
@@ -152,7 +159,8 @@ border-bottom: none !important;
   border: none !important;
 }
 
-.review-btn:hover, .add-btn:hover {
+.review-btn:hover,
+.add-btn:hover {
   opacity: 0.6;
 }
 
@@ -170,7 +178,8 @@ border-bottom: none !important;
   font-size: 15px;
 }
 
-.top-link, .top-text {
+.top-link,
+.top-text {
   font-family: "Comic Neue";
   font-size: 14px;
   color: white;

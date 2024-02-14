@@ -1,32 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Francois+One&family=Lilita+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Francois+One&family=Lilita+One&display=swap");
 
-.home-link , .reviews-link , .watchlist-link {
-font-family: "Lilita One";
-font-size: 20px !important;
-color: black !important;
-/* margin-left: 10px !important;
+.custom-navbar {
+}
+
+.home-link,
+.reviews-link,
+.watchlist-link {
+  font-family: "Lilita One";
+  font-size: 20px !important;
+  color: black !important;
+  /* margin-left: 10px !important;
 padding-top: 50px !important;
 padding-right: 23px !important; */
 }
 
-.home-link:hover, .reviews-link:hover , .watchlist-link:hover {
-font-size: 21px !important;
+.home-link:hover,
+.reviews-link:hover,
+.watchlist-link:hover {
+  font-size: 18px !important;
 }
 
 .home-link:hover {
-color: #CB6CE6 !important;
+  color: #cb6ce6 !important;
 }
 
 .reviews-link:hover {
-color: #00A99D !important;
+  color: #00a99d !important;
 }
 
 .watchlist-link:hover {
-color: #F7D000 !important;
+  color: #f7d000 !important;
 }
 
 .home-link {
-    /* width: 230px;
+  /* width: 230px;
     height: auto !important;
     background-image: url("../assets/images/5.jpg") !important;
     background-size: 150px 150px !important;
@@ -34,7 +41,7 @@ color: #F7D000 !important;
 }
 
 .reviews-link {
-    /* width: 230px;
+  /* width: 230px;
     height:fit-content !important;
     background-image: url("../assets/images/4.jpg") !important;
     background-size: 265px 150px !important;
@@ -42,7 +49,7 @@ color: #F7D000 !important;
 }
 
 .watchlist-link {
-    /* width: 230px;
+  /* width: 230px;
     height: auto !important;
     background-image: url("../assets/images/6.jpg") !important;
     background-size: 230px 150px !important;
