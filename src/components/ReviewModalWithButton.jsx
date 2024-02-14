@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import RatingStarInput from "./RatingStarInput";
 import API from "../utils/API";
-import tvImage from "../assets/images/tv-show.png";
+import tvImage from "../assets/tv-show.png";
 
 const handleStorage = () => {};
 
