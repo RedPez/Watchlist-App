@@ -39,7 +39,7 @@
     margin-top: 20px !important;
   }
   .result-btns {
-   flex-direction: column;
+    flex-direction: column;
   }
   .card-title {
     font-size: calc(3vw + 0.390625vw);
@@ -60,7 +60,7 @@
   }
   .result-btns {
     flex-direction: column;
-   }
+  }
 }
 
 @media only screen and (min-width: 340px) and (max-width: 600px) {
@@ -109,6 +109,11 @@
   }
 }
 
+@media only screen and (min-width: 1020px) and (max-width: 1290px) {
+  .custom-navbar {
+    margin-bottom: 80px;
+  }
+}
 @media only screen and (min-width: 1000px) and (max-width: 1100px) {
   .hero-vid {
     width: 55% !important;
