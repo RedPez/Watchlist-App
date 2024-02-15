@@ -24,9 +24,9 @@ Whether you're a casual viewer looking for your next binge-worthy series or a TV
 
 Happy rating!
 
-![Screenshot image of web app](/assets/)
+![Screenshot image of web app](/src/assets/Watchlist-screenshot.png)
 
-#### [You can visit our page by clicking here.]()
+#### [You can visit our page by clicking here.](https://thewatchlistapp.netlify.app/)
 
 ### Technologies
 
