@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&family=Francois+One&family=Lilita+One&display=swap");
 
-/* page titles */
+/* page titles and text */
 
 h2 {
   font-family: "Francois One";
@@ -10,7 +10,7 @@ h2 {
 }
 
 h3,
-.rating-cont {
+.rating-cont, .p-txt, .filter-btn {
   font-family: "Francois One";
 }
 
@@ -30,11 +30,11 @@ h3,
 
 #search {
   border: solid 3px black;
-  height: 2em;
+  height: 45px;
   width: 15em;
   padding-left: 10px;
   font-family: "Comic Neue";
-  font-size: 22px;
+  font-size: calc(13px + 0.390625vw);
 }
 
 /* search button */
@@ -44,11 +44,11 @@ h3,
   border: white 3px solid !important;
   border-radius: 0 !important;
   font-family: "Francois One" !important;
-  font-size: 20px !important;
+  font-size: calc(12px + 0.390625vw) !important;
   font-weight: bolder !important;
   margin-left: 10px;
   letter-spacing: 1.25px;
-  height: 2.2em !important;
+  height: 45px !important;
 }
 
 /* Hero */
@@ -57,7 +57,7 @@ h3,
   font-family: "Francois One";
   text-align: center;
   -webkit-text-stroke: 1px #ffffff;
-  font-size: 50px;
+  font-size: calc(2.5vw + 0.390625vw) !important;
   z-index: 2;
   color: white;
 }
@@ -90,7 +90,7 @@ h3,
 
 .hero-txt {
   font-family: "Comic Neue";
-  font-size: 18px;
+  font-size: calc(12px + 0.390625vw);
   text-align: center;
   background-color: white;
   border: solid 2px black;
@@ -109,14 +109,14 @@ h3,
 
 .cta-txt {
   padding-top: 5px;
-  font-size: 16px;
+  font-size: calc(12px + 0.390625vw);
   color: #cb6ce6;
 }
 
 .hero-vid {
   width: 55%;
   padding-top: 25px;
-  margin: 0 auto;
+  margin: 0 auto !important;
   margin-top: -39px;
 }
 
@@ -183,13 +183,39 @@ textarea {
 
 /* sort/filter section */
 
-.filter-txt {
+.filter-txt, .search-txt {
   font-family: "Comic Neue";
   font-size: 18px;
   padding-left: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
+.filter-txt {
+  background-color: white;
+}
+
+.search-txt {
+  border: 2px solid black;
+  margin-left : 10px;
+  margin-bottom: 30px !important;
+  margin-top: 10px;
+}
+
+.filter-btn {
+  background-color: black;
+  color: white;
+  padding: 4px 7px 4px 7px;
+  margin-left: 10px;
+ }
+
+ .rating-txt {
+   font-family: "Francois One";
+   font-size: 18px;
+   display: flex;
+   background-color: rgba(255, 255, 255, 0.811);
+   color: black;
+   justify-content: center;
+ }
 /* review tv show and add to watchlist buttons */
 .review-btn,
 .add-btn,
@@ -203,7 +229,7 @@ textarea {
 
 .review-btn:hover,
 .add-btn:hover,
-.remove-btn:hover {
+.remove-btn:hover, .filter-btn:hover {
   opacity: 0.6;
 }
 

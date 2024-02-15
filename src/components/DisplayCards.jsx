@@ -2,7 +2,9 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import "./DisplayCard.css";
 import "./component.css";
+import "./mediaqueries.css";
 import DisplayCard from "./DisplayCard";
+
 
 const DisplayCards = (props) => {
   return (
