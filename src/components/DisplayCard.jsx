@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container, Col, Row } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
