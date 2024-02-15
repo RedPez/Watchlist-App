@@ -49,12 +49,8 @@
   /* transform: translateY(60px); */
   transition: 0.5s;
   display: flex;
-  align-items: flex-end;
-}
-
-.card-img {
-  width: 100% !important; /* Set the image width to 100% of its container */
-  height: 100% !important; /* Set the image height to 100% of its container */
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 /* Need to move title further down and sort out why buttons are not aligned */
@@ -65,7 +61,6 @@
   margin: 0;
   text-align: center;
   width: 100% !important;
-  /* display: none !important; */
 }
 
 .result-btns {

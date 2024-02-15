@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./RatingStarInput.css";
+import "./mediaqueries.css";
 
 const RatingStarInput = ({ value, onChange }) => {
   const [hover, setHover] = useState(null);
