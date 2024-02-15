@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
+import logo from "../assets/site-logo-white.png";
 
 function MyNavbar() {
   return (
@@ -10,7 +11,7 @@ function MyNavbar() {
       <Navbar className="custom-navbar">
         <Container>
           <Navbar.Brand href="/">
-            <img alt="" src="src/assets/site-logo-white.png" width="80" />{" "}
+            <img alt="" src={logo} width="80" />{" "}
           </Navbar.Brand>
           <Nav className="nav-links-group">
             <Nav.Link className="home-link" href="/">
