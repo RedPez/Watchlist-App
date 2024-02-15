@@ -3,6 +3,7 @@ import { Card, Container } from "react-bootstrap";
 import ReviewModalWithButton from "./ReviewModalWithButton";
 import "./DisplayCard.css";
 import "./component.css";
+import "./mediaqueries.css";
 
 import noImage from "../assets/images/no_image_avail.jpg";
 

@@ -37,7 +37,7 @@ const ReviewComponent = () => {
     const stars = [];
     for (let i = 0; i < rating; i++) {
       stars.push(
-        <FaStar key={i} color="gold" style={{ display: "inline-block" }} />
+        <FaStar key={i} style={{ display: "inline-block" }} />
       );
     }
     return <div>{stars}</div>;
@@ -53,15 +53,15 @@ const ReviewComponent = () => {
         {reviews.map((review, index) => (
 
           <Col as="li" key={index} xs={12} md={6} lg={4} xl={3} className="mb-3">
+            <p className="rating-txt"> Your rating: &nbsp; {renderStarIcons(review.overallRating)} </p> 
             <DisplayCard 
             name={review.name}
             image={{original: review.image}}
             review={review}
             id={review.id}
             buttonName= {"✐ Edit"}
-            action={() => <button onClick={() => handleDeleteReview(index)}>Delete</button>}
+            action={() => <button onClick={() => handleDeleteReview(index)} className="remove-btn">✘ Remove</button>}
             />
-            Overall Rating: {renderStarIcons(review.overallRating)}
           </Col>
         ))}
       </ul>
