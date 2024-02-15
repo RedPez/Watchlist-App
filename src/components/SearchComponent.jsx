@@ -6,6 +6,7 @@ import "./mediaqueries.css";
 
 const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
+  const [messageDisplay, setMessageDisplay] = useState(""); // State for search term
   const [searchResult, setSearchResult] = useState(null); // State for search results
   const [searched, setSearched] = useState(false); // State for tracking if search button has been pressed
   const handleSearch = () => {
@@ -16,8 +17,13 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
     setSearched(true); // Update searched state after search button is pressed
   };
 
-  let index = reviews.findIndex((el) => el == searchResult);
+  const handleRemoveSearch = () => {
+    setSearched(false)
+    setSearchResult(null)
+    setSearchTerm("")
+  }
 
+  let index = reviews.findIndex((el) => el == searchResult);
 
   return (
     <div>
@@ -28,7 +34,9 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="search-txt"
       />
-      <button onClick={handleSearch} className="filter-btn">Search</button>
+      <button onClick={handleSearch} className="filter-btn">
+        Search
+      </button>
       {searched && !searchResult && <p>Oopsy! Show not found.</p>}
       {searchResult && (
         <ul className="row flex-nowrap overflow-auto">
@@ -36,16 +44,20 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
             <DisplayCard
               name={searchResult.name}
               image={{ original: searchResult.image }}
-              review={searchResult.reviewText}
+              review={searchResult}
               id={searchResult.id}
               buttonName={"✐ Edit"}
               action={() => (
-                <button onClick={() => handleDeleteReview(index)} className='remove-btn'>
+                <button
+                  onClick={() => handleDeleteReview(index) || handleRemoveSearch(null)}
+                  className="remove-btn"
+                >
                   ✘ Remove
                 </button>
               )}
             />
-            <p className="p-txt"> Overall Rating:</p> {renderStarIcons(searchResult.overallRating)}
+            <p className="p-txt"> Overall Rating: {renderStarIcons(searchResult.overallRating)}</p>
+            
           </Col>
         </ul>
       )}
