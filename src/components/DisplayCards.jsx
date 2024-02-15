@@ -11,8 +11,8 @@ const DisplayCards = (props) => {
         <Col
           as="li"
           key={result.id}
-          xs={12}
-          md={6}
+          xs={7}
+          md={4}
           lg={4}
           xl={3}
           className="mb-3"
