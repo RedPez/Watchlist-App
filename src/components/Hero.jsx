@@ -1,4 +1,5 @@
 import React from "react";
+import video from "../assets/hero-video.mp4";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
         loop
         className="hero-vid"
         onClick={handleClick}
-        src="src/assets/hero-video.mp4"
+        src={video}
         title="hero-video"
       ></video>
     </div>
