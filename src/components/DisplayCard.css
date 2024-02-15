@@ -7,6 +7,12 @@
   max-width: 100%;
 }
 
+.no-scroll {
+  overflow-x: none!important;
+  /* flex-wrap: wrap!important; */
+  max-width: 100%;
+}
+
 .single-card {
   position: relative;
   transition: 0.6s ease-out;
@@ -56,7 +62,7 @@
 /* Need to move title further down and sort out why buttons are not aligned */
 .card-title {
   font-family: "Anton";
-  font-size: 35px !important;
+  font-size: 35px;
   letter-spacing: 1px;
   margin: 0;
   text-align: center;

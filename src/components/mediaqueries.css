@@ -1,0 +1,122 @@
+@media only screen and (max-width: 340px) {
+  .hero-heading {
+    font-size: calc(5vw + 0.390625vw) !important;
+    margin-top: 0 !important;
+  }
+  .hero-txt {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+  .hero-vid {
+    width: 100% !important;
+  }
+  .searchbar {
+    margin-top: 20px !important;
+    z-index: 1;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  #search {
+    width: 100% !important;
+  }
+  .search-btn {
+    width: 75%;
+    margin-top: 10px;
+  }
+  .custom-navbar {
+    margin-bottom: 70px;
+  }
+  .modal-container {
+    flex-direction: column;
+  }
+  .show-stats {
+    margin-top: 20px;
+  }
+  .rating-cont {
+    margin-top: 10px !important;
+  }
+  .review-txt {
+    margin-top: 20px !important;
+  }
+  .result-btns {
+   flex-direction: column;
+  }
+  .card-title {
+    font-size: calc(3vw + 0.390625vw);
+  }
+}
+@media only screen and (min-width: 340px) and (max-width: 600px) {
+  .modal-container {
+    flex-direction: column;
+  }
+  .show-stats {
+    margin-top: 20px;
+  }
+  .rating-cont {
+    margin-top: 10px !important;
+  }
+  .review-txt {
+    margin-top: 20px !important;
+  }
+  .result-btns {
+    flex-direction: column;
+   }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 600px) {
+  .hero-heading {
+    font-size: calc(6vw + 0.390625vw) !important;
+  }
+  .hero-txt {
+    width: 85% !important;
+  }
+  .hero-vid {
+    width: 90% !important;
+  }
+  .searchbar {
+    margin-top: 20px !important;
+    z-index: 1;
+  }
+  .custom-navbar {
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .hero-heading {
+    font-size: calc(6vw + 0.390625vw) !important;
+  }
+  .hero-txt {
+    width: 80% !important;
+  }
+  .hero-vid {
+    width: 75% !important;
+  }
+  .custom-navbar {
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-txt {
+    width: 75% !important;
+  }
+  .hero-vid {
+    width: 65% !important;
+  }
+  .custom-navbar {
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+  .hero-vid {
+    width: 55% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .hero-txt {
+    width: 60% !important;
+  }
+}
