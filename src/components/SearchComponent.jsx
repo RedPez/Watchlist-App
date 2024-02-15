@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-
-const SearchComponent = ({ reviews }) => {
+import DisplayCard from "./DisplayCard";
+import { Col } from "react-bootstrap";
+const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
   const [searchResult, setSearchResult] = useState(null); // State for search results
   const [searched, setSearched] = useState(false); // State for tracking if search button has been pressed
-
   const handleSearch = () => {
-    const result = reviews.find(review =>
+    const result = reviews.find((review) =>
       review.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResult(result);
     setSearched(true); // Update searched state after search button is pressed
   };
+
+  let index = reviews.findIndex((el) => el == searchResult);
+
 
   return (
     <div>
@@ -22,18 +25,27 @@ const SearchComponent = ({ reviews }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
-      {searched && !searchResult && (
-        <p>Oopsy! Show not found.</p>
-      )}
+      {searched && !searchResult && <p>Oopsy! Show not found.</p>}
       {searchResult && (
-        <div>
-          <h2>{searchResult.name}</h2>
-          <img src={searchResult.image} alt={searchResult.name} />
-          <p>Overall Rating: {searchResult.overallRating}</p>
-        </div>
+        <ul className="row flex-nowrap overflow-auto">
+          <Col as="li" xs={12} md={6} lg={4} xl={3} className="mb-3">
+            <DisplayCard
+              name={searchResult.name}
+              image={{ original: searchResult.image }}
+              review={searchResult.reviewText}
+              id={searchResult.id}
+              buttonName={"✐ Edit"}
+              action={() => (
+                <button onClick={() => handleDeleteReview(index)}>
+                  Delete
+                </button>
+              )}
+            />
+            Overall Rating: {renderStarIcons(searchResult.overallRating)}
+          </Col>
+        </ul>
       )}
     </div>
   );
 };
-
 export default SearchComponent;
