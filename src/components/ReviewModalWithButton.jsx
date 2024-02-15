@@ -49,7 +49,7 @@ const ReviewModalWithButton = (props) => {
       overallRating,
       id: props.show.id,
       genre: showDetails.Genre || "Data not available",
-      dateReleased: showDetails.Released || "Data not available"
+      dateReleased: showDetails.Released || "Data not available",
     };
 
     console.log(props);

@@ -45,7 +45,7 @@ const ReviewComponent = () => {
 
   return (
     <div>
-      <SearchComponent reviews={reviews} />
+         <SearchComponent reviews={reviews} handleDeleteReview={handleDeleteReview} renderStarIcons={renderStarIcons} />
       {reviews.length > 0 && <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />}
 
 

@@ -77,21 +77,22 @@
 
 /* Hide scrollbar for WebKit (Chrome, Safari) */
 .row.flex-nowrap::-webkit-scrollbar {
-  width: 8px; /* width of the scrollbar */
+  width: 1px !important; /* width of the scrollbar */
+  height: 8px;
 }
 
 /* Track */
 .row.flex-nowrap::-webkit-scrollbar-track {
-  background: #f1f1f1; /* color of the scrollbar track */
+  background: transparent; /* color of the scrollbar track */
 }
 
 /* Handle */
 .row.flex-nowrap::-webkit-scrollbar-thumb {
-  background: #555; /* color of the scrollbar handle */
-  border-radius: 4px; /* border radius of the scrollbar handle */
+  background: #000000; /* color of the scrollbar handle */
+  border-radius: 2px; /* border radius of the scrollbar handle */
 }
 
 /* Handle on hover */
 .row.flex-nowrap::-webkit-scrollbar-thumb:hover {
-  background: #888; /* color of the scrollbar handle on hover */
+  background: #f7d000; /* color of the scrollbar handle on hover */
 }
