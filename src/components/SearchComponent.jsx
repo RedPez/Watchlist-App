@@ -39,8 +39,8 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
       </button>
       {searched && !searchResult && <p>Oopsy! Show not found.</p>}
       {searchResult && (
-        <ul className="row flex-nowrap overflow-auto">
-          <Col as="li" xs={12} md={6} lg={4} xl={3} className="mb-3">
+        <ul className="row no-scroll">
+          <Col as="li" xs={9} md={4} lg={3} xl={2} className="mb-3">
             <DisplayCard
               name={searchResult.name}
               image={{ original: searchResult.image }}

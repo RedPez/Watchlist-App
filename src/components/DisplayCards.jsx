@@ -1,5 +1,5 @@
 import React from "react";
-import { CardGroup, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import "./DisplayCard.css";
 import "./component.css";
 import "./mediaqueries.css";
@@ -16,7 +16,7 @@ const DisplayCards = (props) => {
           xs={9}
           md={4}
           lg={3}
-          xl={2} // make it xl{3} for 716X870px to 1080x803px
+          xl={2} // make it xl{3} for 716X870px to 1080x803
           className="mb-3"
         >
           <DisplayCard
