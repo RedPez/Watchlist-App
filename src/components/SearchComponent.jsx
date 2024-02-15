@@ -6,6 +6,7 @@ import "./mediaqueries.css";
 
 const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
+  const [messageDisplay, setMessageDisplay] = useState(""); // State for search term
   const [searchResult, setSearchResult] = useState(null); // State for search results
   const [searched, setSearched] = useState(false); // State for tracking if search button has been pressed
   const handleSearch = () => {
@@ -15,6 +16,12 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
     setSearchResult(result);
     setSearched(true); // Update searched state after search button is pressed
   };
+
+  const handleRemoveSearch = () => {
+    setSearched(false)
+    setSearchResult(null)
+    setSearchTerm("")
+  }
 
   let index = reviews.findIndex((el) => el == searchResult);
 
@@ -42,15 +49,15 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
               buttonName={"✐ Edit"}
               action={() => (
                 <button
-                  onClick={() => handleDeleteReview(index)}
+                  onClick={() => handleDeleteReview(index) || handleRemoveSearch(null)}
                   className="remove-btn"
                 >
                   ✘ Remove
                 </button>
               )}
             />
-            <p className="p-txt"> Overall Rating:</p>{" "}
-            {renderStarIcons(searchResult.overallRating)}
+            <p className="p-txt"> Overall Rating: {renderStarIcons(searchResult.overallRating)}</p>
+            
           </Col>
         </ul>
       )}
