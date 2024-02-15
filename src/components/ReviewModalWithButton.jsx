@@ -4,10 +4,10 @@ import Modal from "react-bootstrap/Modal";
 import RatingStarInput from "./RatingStarInput";
 import API from "../utils/API";
 
-import noImage from "../assets/images/no_image_avail.jpg";
+//import noImage from "../assets/images/no_image_avail.jpg";
 
 const ReviewModalWithButton = (props) => {
-  //const noImage = "../assets/images/no_image_avail.jpg";
+  const noImage = "../assets/images/no_image_avail.jpg";
   const [show, setShow] = useState(false);
   const [showDetails, setShowDetails] = useState([]);
   const [characterRating, setCharacterRating] = useState(
@@ -49,7 +49,7 @@ const ReviewModalWithButton = (props) => {
       overallRating,
       id: props.show.id,
       genre: showDetails.Genre || "Data not available",
-      dateReleased: showDetails.Released || "Data not available"
+      dateReleased: showDetails.Released || "Data not available",
     };
 
     console.log(props);
