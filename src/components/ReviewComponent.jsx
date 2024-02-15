@@ -49,10 +49,10 @@ const ReviewComponent = () => {
       {reviews.length > 0 && <FilterShows shows={reviews} onFilter={(genre, date) => console.log(genre, date)} />}
 
 
-      <ul className="row flex-nowrap overflow-auto">
+      <ul className=" row no-scroll">
         {reviews.map((review, index) => (
 
-          <Col as="li" key={index} xs={12} md={6} lg={4} xl={3} className="mb-3">
+          <Col as="li" key={index} xs={9} md={4} lg={3} xl={2} className="mb-3"> {/*make it xl{3} for 716X870px to 1080x803px*/}
             <p className="rating-txt"> Your rating: &nbsp; {renderStarIcons(review.overallRating)} </p> 
             <DisplayCard 
             name={review.name}

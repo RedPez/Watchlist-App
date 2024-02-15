@@ -17,6 +17,7 @@ const DisplayCard = (props) => {
           src={props.image?.original ? props.image.original : noImage}
           alt={props.name}
           className="card-img"
+          style={{height: 350}}
         />
         <Card.ImgOverlay className="hover-text">
           <Card.Title className="card-title">{props.name}</Card.Title>

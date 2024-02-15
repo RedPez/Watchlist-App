@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { CardGroup, Col } from "react-bootstrap";
 import "./DisplayCard.css";
 import "./component.css";
 import "./mediaqueries.css";
@@ -13,10 +13,10 @@ const DisplayCards = (props) => {
         <Col
           as="li"
           key={result.id}
-          xs={7}
+          xs={9}
           md={4}
-          lg={4}
-          xl={3}
+          lg={3}
+          xl={2} // make it xl{3} for 716X870px to 1080x803px
           className="mb-3"
         >
           <DisplayCard

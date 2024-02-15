@@ -57,7 +57,7 @@ h3,
   font-family: "Francois One";
   text-align: center;
   -webkit-text-stroke: 1px #ffffff;
-  font-size: calc(2.5vw + 0.390625vw) !important;
+  font-size: 50px;
   z-index: 2;
   color: white;
 }
@@ -84,7 +84,6 @@ h3,
   text-align: center;
   -webkit-text-stroke: 1px #ffffff;
   font-size: 50px;
-  z-index: 4;
   color: white;
 }
 
@@ -117,7 +116,7 @@ h3,
   width: 55%;
   padding-top: 25px;
   margin: 0 auto !important;
-  margin-top: -39px;
+  margin-top: -39px !important;
 }
 
 /* modal */
