@@ -18,7 +18,6 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
 
   let index = reviews.findIndex((el) => el == searchResult);
 
-
   return (
     <div>
       <input
@@ -28,7 +27,9 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="search-txt"
       />
-      <button onClick={handleSearch} className="filter-btn">Search</button>
+      <button onClick={handleSearch} className="filter-btn">
+        Search
+      </button>
       {searched && !searchResult && <p>Oopsy! Show not found.</p>}
       {searchResult && (
         <ul className="row flex-nowrap overflow-auto">
@@ -36,16 +37,20 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
             <DisplayCard
               name={searchResult.name}
               image={{ original: searchResult.image }}
-              review={searchResult.reviewText}
+              review={searchResult}
               id={searchResult.id}
               buttonName={"✐ Edit"}
               action={() => (
-                <button onClick={() => handleDeleteReview(index)} className='remove-btn'>
+                <button
+                  onClick={() => handleDeleteReview(index)}
+                  className="remove-btn"
+                >
                   ✘ Remove
                 </button>
               )}
             />
-            <p className="p-txt"> Overall Rating:</p> {renderStarIcons(searchResult.overallRating)}
+            <p className="p-txt"> Overall Rating:</p>{" "}
+            {renderStarIcons(searchResult.overallRating)}
           </Col>
         </ul>
       )}
