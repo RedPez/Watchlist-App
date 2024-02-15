@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import DisplayCard from "./DisplayCard";
 import { Col } from "react-bootstrap";
+import "./component.css";
+import "./mediaqueries.css";
+
 const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
   const [searchResult, setSearchResult] = useState(null); // State for search results
@@ -23,8 +26,9 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
         placeholder="Search by show name..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        className="search-txt"
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch} className="filter-btn">Search</button>
       {searched && !searchResult && <p>Oopsy! Show not found.</p>}
       {searchResult && (
         <ul className="row flex-nowrap overflow-auto">
@@ -36,12 +40,12 @@ const SearchComponent = ({ reviews, handleDeleteReview, renderStarIcons }) => {
               id={searchResult.id}
               buttonName={"✐ Edit"}
               action={() => (
-                <button onClick={() => handleDeleteReview(index)}>
-                  Delete
+                <button onClick={() => handleDeleteReview(index)} className='remove-btn'>
+                  ✘ Remove
                 </button>
               )}
             />
-            Overall Rating: {renderStarIcons(searchResult.overallRating)}
+            <p className="p-txt"> Overall Rating:</p> {renderStarIcons(searchResult.overallRating)}
           </Col>
         </ul>
       )}

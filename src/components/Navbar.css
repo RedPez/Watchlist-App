@@ -4,6 +4,10 @@
   background: rgb(0, 0, 0);
 }
 
+.navbar-toggle {
+ background-color: white !important;
+}
+
 .home-link,
 .reviews-link,
 .watchlist-link {

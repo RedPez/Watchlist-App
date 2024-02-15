@@ -1,5 +1,6 @@
 import React from "react";
 import "./component.css";
+import "./mediaqueries.css";
 
 const Searchbar = (props) => {
   return (
